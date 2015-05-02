@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 12dcf57ac73d0c24583135c219309baa
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - Shin: {fileID: 140336, guid: a145053cee19d164a8d9ca0b8ff52e8e, type: 2}
+  - Frenemy: {fileID: 142962, guid: 958e68ba392856c45b26682b6e8835b5, type: 2}
+  - Stone: {fileID: 182818, guid: fba5e33abeb08204eb7d36e2a2022d50, type: 2}
+  - Dirt: {fileID: 191140, guid: 8dee343428446af4a8de54144d631326, type: 2}
+  - Grass: {fileID: 128096, guid: 441e3547245584d439ce026ed5c3ed51, type: 2}
+  - PPortal: {fileID: 102390, guid: 8c241947bc1cdd34aaafbfbe571b581b, type: 2}
+  - MCPortal: {fileID: 146296, guid: 9fe3b3963add9ef42ad8d242291ebf03, type: 2}
+  - Player: {fileID: 129932, guid: c697fc4102362854297c4ae69758a0ed, type: 2}
+  - PortalGround: {fileID: 171290, guid: da7a40956e4a4c146b4c7c0dac95341b, type: 2}
+  - Marker: {fileID: 100118, guid: 2de89a100ed95fc4184982a8401db8f5, type: 2}
+  - TreeTrunk: {fileID: 156858, guid: 347e1253f9a6de54f81d6b6dd19d7624, type: 2}
+  - Leaves: {fileID: 167644, guid: 0efc1fa3814339c458a5dfc5ae915f97, type: 2}
+  - Iron: {fileID: 123980, guid: 3c69fa57c4c54704d9a7059fec058ac6, type: 2}
+  - Enemy: {fileID: 135028, guid: 78adb00a0f4669c4c84fe990b740f16b, type: 2}
+  - DOENDIT: {instanceID: 0}
+  - Coal: {fileID: 145744, guid: 7426218b400d70c43af0bd726f65aa35, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
