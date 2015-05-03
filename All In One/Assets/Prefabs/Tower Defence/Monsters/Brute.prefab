@@ -1678,8 +1678,10 @@ MonoBehaviour:
   characterType: 
   tAudio: {fileID: 0}
   death: {fileID: 0}
-  tkills: {fileID: 0}
-  tgold: {fileID: 0}
+  die: {fileID: 0}
+  xOffset: 0
+  yOffset: 0
+  aTexture: {fileID: 2800000, guid: 580615edf5e29d245af58fc5fe2b06ac, type: 3}
 --- !u!114 &11477384
 MonoBehaviour:
   m_ObjectHideFlags: 1

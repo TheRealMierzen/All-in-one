@@ -1753,6 +1753,9 @@ MonoBehaviour:
   tAudio: {fileID: 0}
   death: {fileID: 0}
   die: {fileID: 7400006, guid: bfeda64184da26b479effef1188c76f1, type: 3}
+  xOffset: 0
+  yOffset: 0
+  aTexture: {fileID: 2800000, guid: 580615edf5e29d245af58fc5fe2b06ac, type: 3}
 --- !u!114 &11418566
 MonoBehaviour:
   m_ObjectHideFlags: 1

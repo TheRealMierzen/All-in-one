@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - TEnemy
   - TDControl
+  - Dead
   layers:
   - Default
   - TransparentFX
