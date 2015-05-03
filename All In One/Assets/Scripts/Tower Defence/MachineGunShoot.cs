@@ -70,16 +70,17 @@ public class MachineGunShoot : MonoBehaviour {
 
 
 		
-		switch (Status) {
-			
-		case "Idle":
+		switch (Status)
+        {
+            case "Idle":
+                Turret.transform.Rotate (Vector3.up, rotationSpeed * Time.deltaTime);
+			    tAudio.Stop ();
+			    break;
 
-			Turret.transform.Rotate (Vector3.up, rotationSpeed * Time.deltaTime);
-			tAudio.Stop ();
-			break;
-		case "Shoot":
-			Fire();
-			break;
+            case "Shoot":
+                if (Util.isObstructed(TurretPos,-fDirection,range) == true)
+			        Fire();
+                break;
 		}
 		
 		
