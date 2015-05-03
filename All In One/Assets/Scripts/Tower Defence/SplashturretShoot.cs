@@ -77,16 +77,16 @@ public class SplashturretShoot : MonoBehaviour {
 		
 		
 		
-		switch (Status) {
-			
-		case "Idle":
-			
-			Turret.transform.Rotate (Vector3.up, 30 * Time.deltaTime);
-			tAudio.Stop ();
-			break;
-		case "Shoot":
-			Fire();
-			break;
+		switch (Status)
+        {
+		    case "Idle":
+			    Turret.transform.Rotate (Vector3.up, 30 * Time.deltaTime);
+			    tAudio.Stop ();
+			    break;
+		    case "Shoot":
+                if (Util.isObstructed(TurretPos,-fDirection,range)==true)
+			        Fire();
+			    break;
 		}
 		
 		
