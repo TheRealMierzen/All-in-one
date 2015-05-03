@@ -14,6 +14,7 @@ GameObject:
   - 114: {fileID: 11429934}
   - 45: {fileID: 4540922}
   - 54: {fileID: 5476358}
+  - 114: {fileID: 11461202}
   - 114: {fileID: 11402986}
   - 114: {fileID: 11455176}
   - 114: {fileID: 11410342}
@@ -69,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 129932}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -30.7649231, y: 3.25786257, z: -74.3138885}
+  m_LocalPosition: {x: 1015, y: 1001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 429934}
@@ -223,9 +224,11 @@ MonoBehaviour:
   currentHealth: 0
   weapon: {fileID: 0}
   character: {fileID: 129932}
+  control: {fileID: 0}
   characterType: 
   tAudio: {fileID: 0}
   death: {fileID: 0}
+  die: {fileID: 0}
 --- !u!114 &11410342
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -354,6 +357,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bfab5aa56bdced4486104793703b277, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11461202
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16d7b36a72efb8a4e955ddcf5d862dd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 129932}
+  spawn: 
+  spawnLocation: {x: 1015, y: 1001, z: 0}
 --- !u!124 &12429936
 Behaviour:
   m_ObjectHideFlags: 1

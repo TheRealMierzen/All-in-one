@@ -126,11 +126,11 @@ public class RandomGenerate : MonoBehaviour {
 		//Instantiate (Player, new Vector3 (0, GroundLevel + 5, 0), Quaternion.identity);
 
 		//ZOMBIE SPAWN
-		Instantiate (Player, new Vector3 (0, 1001, 1000), Quaternion.identity);
-
-		 
-		Instantiate (Enemy, new Vector3 (1015, 1001, 0), Quaternion.identity);
-		
+//		Instantiate (Player, new Vector3 (0, 1001, 1000), Quaternion.identity);
+//
+//		 
+//		Instantiate (Enemy, new Vector3 (1015, 1001, 0), Quaternion.identity);
+//		
 		//Instantiate (Frenemy, new Vector3 (1010, 1050, 0), Quaternion.identity);
 	}
 	
