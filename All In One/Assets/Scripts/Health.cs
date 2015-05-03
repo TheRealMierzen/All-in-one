@@ -15,7 +15,8 @@ public class Health : MonoBehaviour {
 	public string characterType;
 	public AudioSource tAudio;
 	public AudioClip death;
-
+	public Animation die;
+	float  healthBarLength;
 	
 
 	// Use this for initialization
@@ -23,7 +24,7 @@ public class Health : MonoBehaviour {
 
 		character = this.gameObject;
 		characterType = this.gameObject.name;
-		getCharacterTypeType ();
+		getCharacterType ();
 		tAudio = GetComponent<AudioSource> ();
 	
 	}
@@ -36,7 +37,7 @@ public class Health : MonoBehaviour {
 	}
 
 
-	void getCharacterTypeType(){
+	void getCharacterType(){
 
 
 
@@ -44,20 +45,30 @@ public class Health : MonoBehaviour {
 		{
 		case "CircleZombie(Clone)":
 			maxHealth = 100;
+
 			break;
+
 		case "Player(Clone)":
 			maxHealth = 200;
 			break;
-		case "Crashed":
-			//do nothing
-			break;
+		
 		case "Brute":
 			maxHealth = 300;
 
 			break;
+
 		case "CaveWorm":
 			maxHealth = 200;
 
+			break;
+
+		case "Golem":
+			maxHealth = 500;
+			
+			break;
+
+		case "Crashed":
+			//do nothing
 			break;
 		default:
 			maxHealth = 50;
@@ -65,6 +76,7 @@ public class Health : MonoBehaviour {
 		}
 		
 		currentHealth = maxHealth;
+		healthBarLength = currentHealth / maxHealth;
 
 	}
 
@@ -74,6 +86,7 @@ public class Health : MonoBehaviour {
 
 
 		currentHealth = currentHealth - damage;
+		healthBarLength = currentHealth / maxHealth;
 
 		if (currentHealth <= 0) {
 			control = GameObject.FindGameObjectWithTag ("TDControl");
@@ -81,14 +94,32 @@ public class Health : MonoBehaviour {
 		
 			control.GetComponent<Spawning>().numAlive -= 1;
 			//tAudio.Play ();
+			character.GetComponent<NavMeshAgent>().enabled = false;
+			character.GetComponent<Animation>().Play (die.name);
 
-			Debug.Log ("I DIED");
-			Destroy (this.gameObject,0.1f);
+
+			Destroy (this.gameObject,1f);
 
 
 
 		}
 
+	}
+
+
+	public void AdjustcurHealth (int damage) {
+		currentHealth -= damage;
+
+		if(currentHealth < 0)
+			currentHealth = 0;
+
+		if(currentHealth > maxHealth)
+			currentHealth = maxHealth;
+
+		if(maxHealth < 1)
+			maxHealth = 1;
+
+		healthBarLength = (currentHealth / (float)maxHealth);
 	}
 
 
