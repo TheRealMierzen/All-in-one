@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 
 	
@@ -10,9 +11,11 @@ public class Health : MonoBehaviour {
 	public GameObject weapon;
 
 	public GameObject character;
+	public GameObject control;
 	public string characterType;
 	public AudioSource tAudio;
 	public AudioClip death;
+
 	
 
 	// Use this for initialization
@@ -49,7 +52,12 @@ public class Health : MonoBehaviour {
 			//do nothing
 			break;
 		case "Brute":
+			maxHealth = 300;
+
+			break;
+		case "CaveWorm":
 			maxHealth = 200;
+
 			break;
 		default:
 			maxHealth = 50;
@@ -68,12 +76,16 @@ public class Health : MonoBehaviour {
 		currentHealth = currentHealth - damage;
 
 		if (currentHealth <= 0) {
+			control = GameObject.FindGameObjectWithTag ("TDControl");
+
+		
+			control.GetComponent<Spawning>().numAlive -= 1;
+			//tAudio.Play ();
+
+			Debug.Log ("I DIED");
+			Destroy (this.gameObject,0.1f);
 
 
-			tAudio.Play ();
-
-
-			Destroy (this.gameObject,1);
 
 		}
 

@@ -14,7 +14,7 @@ public class FlameShoot : MonoBehaviour {
 	public AudioSource tAudio;
 	
 	float fireRate = 3f;
-	float range = 5f;
+	float range = 7f;
 	public float damage = 15f;
 	float lastShotTime = float.MinValue;
 	ParticleSystem fire;

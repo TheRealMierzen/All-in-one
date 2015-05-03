@@ -1,11 +1,17 @@
 fileFormatVersion: 2
 guid: 91e05f3e6eacc554d8de9a5f0f163735
+timeCreated: 1430606074
+licenseType: Free
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
+  - weapon: {instanceID: 0}
   - character: {instanceID: 0}
-  - portablePlayer: {fileID: 135730, guid: 9e15d8b41f619b54fadbcac01b1b832c, type: 2}
-  - player: {fileID: 129932, guid: c697fc4102362854297c4ae69758a0ed, type: 2}
+  - control: {instanceID: 0}
+  - tAudio: {instanceID: 0}
+  - death: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

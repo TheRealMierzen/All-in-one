@@ -133,9 +133,8 @@ GameObject:
   - 82: {fileID: 8296900}
   - 136: {fileID: 13686188}
   - 195: {fileID: 19570806}
-  - 114: {fileID: 11468776}
-  - 114: {fileID: 11455034}
   - 114: {fileID: 11431670}
+  - 114: {fileID: 11455034}
   m_Layer: 0
   m_Name: Brute
   m_TagString: TEnemy
@@ -1675,36 +1674,12 @@ MonoBehaviour:
   currentHealth: 0
   weapon: {fileID: 0}
   character: {fileID: 0}
+  control: {fileID: 0}
   characterType: 
   tAudio: {fileID: 0}
   death: {fileID: 0}
---- !u!114 &11468776
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 116028}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15c583055a76eb446a68e517032a58f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartPoint: {fileID: 0}
-  Waypoint1: {fileID: 0}
-  Waypoint2: {fileID: 0}
-  Waypoint3: {fileID: 0}
-  Waypoint4: {fileID: 0}
-  EndPoint: {fileID: 0}
-  Enemy: {fileID: 0}
-  movementSpeed: 1.5
-  path: 0
-  walkDirection: {x: 0, y: 0, z: 0}
-  StartPos: {x: 0, y: 0, z: 0}
-  EndPos: {x: 0, y: 0, z: 0}
-  Waypoint1Pos: {x: 0, y: 0, z: 0}
-  Waypoint2Pos: {x: 0, y: 0, z: 0}
-  Waypoint3Pos: {x: 0, y: 0, z: 0}
-  Waypoint4Pos: {x: 0, y: 0, z: 0}
+  tkills: {fileID: 0}
+  tgold: {fileID: 0}
 --- !u!114 &11477384
 MonoBehaviour:
   m_ObjectHideFlags: 1
