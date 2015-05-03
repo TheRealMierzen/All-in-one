@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 91e05f3e6eacc554d8de9a5f0f163735
-timeCreated: 1430606074
+timeCreated: 1430647030
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
@@ -10,6 +10,8 @@ MonoImporter:
   - control: {instanceID: 0}
   - tAudio: {instanceID: 0}
   - death: {instanceID: 0}
+  - die: {instanceID: 0}
+  - aTexture: {fileID: 2800000, guid: 580615edf5e29d245af58fc5fe2b06ac, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

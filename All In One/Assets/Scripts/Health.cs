@@ -17,6 +17,7 @@ public class Health : MonoBehaviour {
 	public AudioClip death;
 	public Animation die;
 	float  healthBarLength;
+
 	
 
 	// Use this for initialization
@@ -26,13 +27,13 @@ public class Health : MonoBehaviour {
 		characterType = this.gameObject.name;
 		getCharacterType ();
 		tAudio = GetComponent<AudioSource> ();
-	
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-	
+
 	
 	}
 
@@ -89,13 +90,15 @@ public class Health : MonoBehaviour {
 		healthBarLength = currentHealth / maxHealth;
 
 		if (currentHealth <= 0) {
+			character.tag = "Dead";
 			control = GameObject.FindGameObjectWithTag ("TDControl");
 
 		
 			control.GetComponent<Spawning>().numAlive -= 1;
 			//tAudio.Play ();
 			character.GetComponent<NavMeshAgent>().enabled = false;
-			character.GetComponent<Animation>().Play (die.name);
+			if (die != null)
+				character.GetComponent<Animation>().Play (die.name);
 
 
 			Destroy (this.gameObject,1f);
@@ -107,20 +110,6 @@ public class Health : MonoBehaviour {
 	}
 
 
-	public void AdjustcurHealth (int damage) {
-		currentHealth -= damage;
-
-		if(currentHealth < 0)
-			currentHealth = 0;
-
-		if(currentHealth > maxHealth)
-			currentHealth = maxHealth;
-
-		if(maxHealth < 1)
-			maxHealth = 1;
-
-		healthBarLength = (currentHealth / (float)maxHealth);
-	}
 
 
 }
