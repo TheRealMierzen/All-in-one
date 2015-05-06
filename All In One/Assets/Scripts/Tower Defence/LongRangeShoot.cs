@@ -76,7 +76,7 @@ public class LongRangeShoot : MonoBehaviour {
 			    tAudio.Stop ();
 			    break;
 		    case "Shoot":
-                if (Util.isObstructed(TurretPos, fDirection, range) == true)
+                if (Util.isObstructed(TurretPos, fDirection, range) == false)
                 {
                     FireLaser();
                     line.enabled = true;

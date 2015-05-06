@@ -10,7 +10,7 @@ public class goldManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		
-		gold = 100;
+
 		
 	}
 	

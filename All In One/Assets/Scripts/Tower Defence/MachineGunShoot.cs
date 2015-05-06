@@ -78,7 +78,7 @@ public class MachineGunShoot : MonoBehaviour {
 			    break;
 
             case "Shoot":
-                if (Util.isObstructed(TurretPos,-fDirection,range) == true)
+                if (Util.isObstructed(TurretPos,-fDirection,range) == false)
 			        Fire();
                 break;
 		}
