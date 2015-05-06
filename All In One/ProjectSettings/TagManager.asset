@@ -9,6 +9,8 @@ TagManager:
   - TEnemy
   - TDControl
   - Dead
+  - cTowerGround
+  - cZombieGround
   layers:
   - Default
   - TransparentFX

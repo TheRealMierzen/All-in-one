@@ -18,7 +18,8 @@ public class Health : MonoBehaviour {
 	public Animation die;
 	float  healthBarLength;
 
-	
+
+	int goldWorth;
 
 	// Use this for initialization
 	void Start () {
@@ -46,7 +47,7 @@ public class Health : MonoBehaviour {
 		{
 		case "CircleZombie(Clone)":
 			maxHealth = 100;
-
+			goldWorth = 100;
 			break;
 
 		case "Player(Clone)":
@@ -55,17 +56,17 @@ public class Health : MonoBehaviour {
 		
 		case "Brute":
 			maxHealth = 300;
-
+			goldWorth = 30;
 			break;
 
 		case "CaveWorm":
 			maxHealth = 200;
-
+			goldWorth = 20;
 			break;
 
 		case "Golem":
 			maxHealth = 500;
-			
+			goldWorth = 50;
 			break;
 
 		case "Crashed":
@@ -93,13 +94,15 @@ public class Health : MonoBehaviour {
 			character.tag = "Dead";
 			control = GameObject.FindGameObjectWithTag ("TDControl");
 
-		
+
 			control.GetComponent<Spawning>().numAlive -= 1;
 			//tAudio.Play ();
 			character.GetComponent<NavMeshAgent>().enabled = false;
 			if (die != null)
 				character.GetComponent<Animation>().Play (die.name);
 
+			GameObject.Find ("Control").GetComponent<goldManager>().addGold (goldWorth);
+			GameObject.Find ("Control").GetComponent<killsManager>().addKill();
 
 			Destroy (this.gameObject,1f);
 

@@ -4,16 +4,15 @@ using System.Collections;
 public class SwitchSpawn : MonoBehaviour {
 
 	public GameObject player;
-	public string spawn;
-	public Vector3 spawnLocation;
+	public string 	  spawn;
+	public Vector3 	  spawnLocation;
+
 
 	// Use this for initialization
 	void Start () {
+	
 		SetSpawn (spawn);
 
-
-
-	
 	}
 	
 	public void SetSpawn(string spawn){
