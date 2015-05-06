@@ -75,20 +75,22 @@ public class FlameShoot : MonoBehaviour {
 		
 		
 		
-		switch (Status) {
-			
-		case "Idle":
-			fire.enableEmission = false;
-			Turret.transform.Rotate (Vector3.up, 30 * Time.deltaTime);
-			tAudio.Stop ();
-			break;
-		case "Shoot":
-			fire.enableEmission = true;
-			Fire();
-			break;
+		switch (Status)
+        {
+            case "Idle":
+			    fire.enableEmission = false;
+			    Turret.transform.Rotate (Vector3.up, 30 * Time.deltaTime);
+			    tAudio.Stop ();
+			    break;
+
+            case "Shoot":
+                if (Util.isObstructed(TurretPos,-fDirection,range)==false)
+                {
+                    fire.enableEmission = true;
+                    Fire();
+                }
+                break;
 		}
-		
-		
 	}
 	
 	

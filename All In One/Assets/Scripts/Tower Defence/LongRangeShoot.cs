@@ -68,18 +68,21 @@ public class LongRangeShoot : MonoBehaviour {
 		}
 
 
-		switch (Status) {
-			
-		case "Idle":
-			line.enabled = false;
-			Turret.transform.Rotate (Vector3.up, 30 * Time.deltaTime);
-			tAudio.Stop ();
-			break;
-		case "Shoot":
-			FireLaser ();
-			line.enabled = true;
-			Fire();
-			break;
+		switch (Status)
+        {
+		    case "Idle":
+			    line.enabled = false;
+			    Turret.transform.Rotate (Vector3.up, 30 * Time.deltaTime);
+			    tAudio.Stop ();
+			    break;
+		    case "Shoot":
+                if (Util.isObstructed(TurretPos, fDirection, range) == true)
+                {
+                    FireLaser();
+                    line.enabled = true;
+                    Fire();
+                }
+                break;
 		}
 	
 
