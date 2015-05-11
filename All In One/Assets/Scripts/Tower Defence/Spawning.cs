@@ -11,7 +11,7 @@ public class Spawning : MonoBehaviour {
 	public int   waveCount;
 
 	public int   numAlive;	
-	public GameObject[] enemies = new GameObject[3] ;
+	public GameObject[] enemies = new GameObject[7] ;
 
 	GameObject enemyType;
 	Vector3 spawnLocation;

@@ -20,7 +20,7 @@ public class SwitchSpawn : MonoBehaviour {
 		switch (spawn) {
 		case "Tower":
 
-			spawnLocation = new Vector3 (0f, 1001f, 1000f);
+			spawnLocation = new Vector3 (1.370239f, 1003.83f, 1029.626f);
 			break;
 		case "Zombie":
 

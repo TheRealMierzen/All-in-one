@@ -74,7 +74,7 @@ public class MachineGunShoot : MonoBehaviour {
         {
             case "Idle":
                 Turret.transform.Rotate (Vector3.up, rotationSpeed * Time.deltaTime);
-			    tAudio.Stop ();
+			   
 			    break;
 
             case "Shoot":
@@ -98,7 +98,7 @@ public class MachineGunShoot : MonoBehaviour {
 			Target.GetComponent<Health>().ApplyDamage (damage,Turret);
 			
 			if (Target.GetComponent<Health>().currentHealth <=0){
-				tAudio.Stop ();
+
 
 				Target = this.gameObject;
 				Status = "Idle";

@@ -69,6 +69,75 @@ public class Health : MonoBehaviour {
 			goldWorth = 50;
 			break;
 
+		case "DarkDemon":
+			maxHealth = 600;
+			goldWorth = 50;
+			break;
+
+		case "FireDemon":
+			maxHealth = 600;
+			goldWorth = 50;
+			break;
+
+		case "IceDemon":
+			maxHealth = 600;
+			goldWorth = 50;
+			break;
+
+		case "EarthDemon":
+			maxHealth = 600;
+			goldWorth = 50;
+			break;
+
+		case "Goblin":
+			maxHealth = 300;
+			goldWorth = 50;
+			break;
+
+		case "BigGoblin":
+			maxHealth = 450;
+			goldWorth = 50;
+			break;
+
+		case "NormalSkeleton":
+			maxHealth = 350;
+			goldWorth = 50;
+			break;
+
+		case "FastSkeleton":
+			maxHealth = 250;
+			goldWorth = 50;
+			break;
+
+		case "Darkling":
+			maxHealth = 600;
+			goldWorth = 50;
+			break;
+
+		case "Cyclops":
+			maxHealth = 550;
+			goldWorth = 50;
+			break;
+
+		case "Prowler":
+			maxHealth = 600;
+			goldWorth = 50;
+			break;
+
+		case "GreenGoblin":
+			maxHealth = 400;
+			goldWorth = 50;
+			break;
+
+		case "BlueGoblin":
+			maxHealth = 450;
+			goldWorth = 50;
+			break;
+
+		case "RedGoblin":
+			maxHealth = 500;
+			goldWorth = 50;
+			break;
 		case "Crashed":
 			//do nothing
 			break;

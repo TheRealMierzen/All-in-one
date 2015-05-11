@@ -1679,9 +1679,6 @@ MonoBehaviour:
   tAudio: {fileID: 0}
   death: {fileID: 0}
   die: {fileID: 0}
-  xOffset: 0
-  yOffset: 0
-  aTexture: {fileID: 2800000, guid: 580615edf5e29d245af58fc5fe2b06ac, type: 3}
 --- !u!114 &11477384
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1703,7 +1700,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 116028}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: .300000012
   m_Height: 2

@@ -11,6 +11,13 @@ public class TDMovement : MonoBehaviour {
 			GetComponent<NavMeshAgent>().destination = end.transform.position;
 	
 	}
-	
+
+	void OnTriggerEnter(Collider collision) {
+		// If endPortal then lifes -1 & destroy
+		if (collision.name == "EndPortal") {
+			collision.GetComponent<LifesManager>().decrease();
+			Destroy (this.gameObject);
+		}
+	}
 
 }
