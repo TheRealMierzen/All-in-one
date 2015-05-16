@@ -447,6 +447,7 @@ GameObject:
   - 195: {fileID: 19550716}
   - 114: {fileID: 11457600}
   - 114: {fileID: 11477888}
+  - 136: {fileID: 13662864}
   m_Layer: 0
   m_Name: Golem
   m_TagString: TEnemy
@@ -1293,7 +1294,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 144426}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.78731155, y: 1000.09998, z: 1035.82996}
+  m_LocalPosition: {x: 55.4316978, y: 1002.77997, z: 1065.8667}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 416394}
@@ -1783,9 +1784,7 @@ MonoBehaviour:
   tAudio: {fileID: 0}
   death: {fileID: 0}
   die: {fileID: 7400016, guid: 8ba535c70bbcf7b46b0cba1188faae47, type: 3}
-  xOffset: 0
-  yOffset: 0
-  aTexture: {fileID: 2800000, guid: 580615edf5e29d245af58fc5fe2b06ac, type: 3}
+  goldWorth: 0
 --- !u!114 &11477888
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1797,6 +1796,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2744753f176fa394a96acfcdcc818d1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &13662864
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144426}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .15767099
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: .49000001, z: 0}
 --- !u!137 &13761970
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

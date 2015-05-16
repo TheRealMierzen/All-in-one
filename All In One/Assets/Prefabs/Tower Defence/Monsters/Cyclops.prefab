@@ -1729,6 +1729,7 @@ MonoBehaviour:
   tAudio: {fileID: 0}
   death: {fileID: 0}
   die: {fileID: 0}
+  goldWorth: 0
 --- !u!114 &11462268
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1747,7 +1748,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 198874}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: .5
   m_Height: 2.6400001

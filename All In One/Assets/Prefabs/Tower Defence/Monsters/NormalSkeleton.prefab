@@ -1964,7 +1964,8 @@ Animation:
   m_Enabled: 1
   serializedVersion: 3
   m_Animation: {fileID: 7400030, guid: 39d03f82786b57d41af8bd27bce84402, type: 3}
-  m_Animations: []
+  m_Animations:
+  - {fileID: 7400030, guid: 39d03f82786b57d41af8bd27bce84402, type: 3}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -2000,6 +2001,7 @@ MonoBehaviour:
   tAudio: {fileID: 0}
   death: {fileID: 0}
   die: {fileID: 0}
+  goldWorth: 0
 --- !u!136 &13695322
 CapsuleCollider:
   m_ObjectHideFlags: 1

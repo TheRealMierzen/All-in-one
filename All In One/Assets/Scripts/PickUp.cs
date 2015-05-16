@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class PickUp : MonoBehaviour {
@@ -11,35 +11,47 @@ public class PickUp : MonoBehaviour {
 	public GameObject player;
 	public bool floatingUp;
 
-
+	int value;
 
 	// Use this for initialization
 	void Start () {
 
-
+		item = gameObject;
 		player = GameObject.FindGameObjectWithTag ("Player");
 
-		float xScale = 0.2f;
-		float yScale = 0.2f;
-		float zScale = 0.2f;
+		if (item.name == "goldCoins") {
 
-		float OxScale = 0.2f;
-		float OyScale = 0.2f;
-		float OzScale = 0.2f;
+			//value = ;
 
-		item = gameObject;
+		} else 
+		{
+
+			float xScale = 0.2f;
+			float yScale = 0.2f;
+			float zScale = 0.2f;
+			
+			float OxScale = 0.2f;
+			float OyScale = 0.2f;
+			float OzScale = 0.2f;
+			
+			
+			
+			
+			OxScale = item.transform.localScale.x;
+			OyScale = item.transform.localScale.y;
+			OzScale = item.transform.localScale.z;
+			
+			//Scale object down
+			OxScale = OxScale * xScale; 
+			OyScale = OyScale * yScale; 
+			OzScale = OzScale * zScale; 
+			
+			item.transform.localScale = new Vector3(OxScale , OyScale , OzScale );
+
+		}
 
 
-		OxScale = item.transform.localScale.x;
-		OyScale = item.transform.localScale.y;
-		OzScale = item.transform.localScale.z;
 
-		//Scale object down
-		OxScale = OxScale * xScale; 
-		OyScale = OyScale * yScale; 
-		OzScale = OzScale * zScale; 
-
-		item.transform.localScale = new Vector3(OxScale , OyScale , OzScale );
 
 
 
@@ -49,27 +61,32 @@ public class PickUp : MonoBehaviour {
 	void Update () {
 
 		//transform.LookAt(player.transform);
-		Float ();
+		if (item.name != "goldCoins") {
+			Float ();
 
-		Vector3 pDirection = player.transform.position - item.transform.position;
+			Vector3 pDirection = player.transform.position - item.transform.position;
 
-		pDirection.Normalize ();
-		float distance = (transform.localPosition  - player.transform.position).magnitude;//Vector3.Distance (transform.localPosition,player.transform.localPosition );
+			pDirection.Normalize ();
+			float distance = (transform.localPosition - player.transform.position).magnitude;//Vector3.Distance (transform.localPosition,player.transform.localPosition );
 	
+		
+			if (distance <= 1f) {
 
-		if (distance <= 1f) {
-
-			if (Inventory.addToInv(this.gameObject.name) == true){
+				if (Inventory.addToInv (this.gameObject.name) == true) {
 
 					Destroy (this.gameObject);
 
-			}
+				}
 
-			UnityEditor.EditorApplication.Beep ();
+
+
+			}
+		
+		} else if (item.name == "goldCoins") {
+
+
 
 		}
-		
-
 
 	}
 

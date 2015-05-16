@@ -1776,6 +1776,7 @@ MonoBehaviour:
   tAudio: {fileID: 0}
   death: {fileID: 0}
   die: {fileID: 0}
+  goldWorth: 0
 --- !u!114 &11443986
 MonoBehaviour:
   m_ObjectHideFlags: 1

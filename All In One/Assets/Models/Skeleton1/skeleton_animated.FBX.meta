@@ -167,6 +167,7 @@ ModelImporter:
     7400044: JumpLoop
     7400046: LandFromJump
     9500000: //RootNode
+    11100000: //RootNode
     13700000: SM_Skeleton_Base
   materials:
     importMaterials: 1
@@ -2648,13 +2649,13 @@ ModelImporter:
       name: Walk01
       takeName: Take 001
       firstFrame: 1143
-      lastFrame: 1175
-      wrapMode: 0
+      lastFrame: 1174
+      wrapMode: 2
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
-      loop: 0
-      loopTime: 0
+      loop: 1
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -4157,7 +4158,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

@@ -14,6 +14,8 @@ public class TDMovement : MonoBehaviour {
 
 	void OnTriggerEnter(Collider collision) {
 		// If endPortal then lifes -1 & destroy
+
+		Debug.Log (collision.name);
 		if (collision.name == "EndPortal") {
 			collision.GetComponent<LifesManager>().decrease();
 			Destroy (this.gameObject);

@@ -19,7 +19,7 @@ public class Health : MonoBehaviour {
 	float  healthBarLength;
 
 
-	int goldWorth;
+	public int goldWorth;
 
 	// Use this for initialization
 	void Start () {

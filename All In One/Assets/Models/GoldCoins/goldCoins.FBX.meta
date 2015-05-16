@@ -1,18 +1,12 @@
 fileFormatVersion: 2
-guid: c4deb3e9a4f95404bac6138e7b2d1f51
+guid: e8449808043a6114eb825a7cbbf749bf
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: gold_bar_48
-    4300002: gold_bar
-    9500000: //RootNode
+    4300000: Object62
   materials:
     importMaterials: 1
-    materialName: 0
+    materialName: 3
     materialSearch: 1
   animations:
     legacyGenerateAnimations: 4
@@ -63,7 +57,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
