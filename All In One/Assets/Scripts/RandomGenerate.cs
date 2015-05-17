@@ -120,18 +120,7 @@ public class RandomGenerate : MonoBehaviour {
 
 		Instantiate (MCPortal, new Vector3 (2, 12, 6), Quaternion.identity);
 		Instantiate (PortalGround, new Vector3 (0, GroundLevel, 0), Quaternion.identity);
-		//Instantiate (Marker, new Vector3 (0, GroundLevel + 3, 0), Quaternion.identity);
 
-		//PORTAL SPAWN
-		//Instantiate (Player, new Vector3 (0, GroundLevel + 5, 0), Quaternion.identity);
-
-		//ZOMBIE SPAWN
-//		Instantiate (Player, new Vector3 (0, 1001, 1000), Quaternion.identity);
-//
-//		 
-//		Instantiate (Enemy, new Vector3 (1015, 1001, 0), Quaternion.identity);
-//		
-		//Instantiate (Frenemy, new Vector3 (1010, 1050, 0), Quaternion.identity);
 	}
 	
 	// Update is called once per frame

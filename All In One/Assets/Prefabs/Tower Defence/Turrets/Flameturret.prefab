@@ -349,7 +349,7 @@ MonoBehaviour:
   Status: Idle
   ShootingSound: {fileID: 0}
   tAudio: {fileID: 8294314}
-  damage: 15
+  damage: 7
 --- !u!198 &19887300
 ParticleSystem:
   m_ObjectHideFlags: 1
