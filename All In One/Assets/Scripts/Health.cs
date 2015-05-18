@@ -114,6 +114,11 @@ public class Health : MonoBehaviour {
 			goldWorth = 50;
 			break;
 
+		case "BigDarkling":
+			maxHealth = 800;
+			goldWorth = 50;
+			break;
+
 		case "Cyclops":
 			maxHealth = 550;
 			goldWorth = 50;

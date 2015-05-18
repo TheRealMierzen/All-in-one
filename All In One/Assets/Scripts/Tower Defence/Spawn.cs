@@ -14,7 +14,7 @@ public class Spawn : MonoBehaviour {
 //			Spawn = GameObject.Find ("SpawnSpot1");
 //		}
 		Instantiate (player, spawn.transform.position, Quaternion.identity);
-	
+		Cursor.visible = false;
 	}
 
 }
