@@ -125,15 +125,15 @@ ModelImporter:
     400118: weapon
     4300000: Cyclop
     4300002: Weapon
-    7400000: attack_1
+    7400000: CyclopsAttack
     7400002: attack_2
-    7400004: death
+    7400004: CyclopsDie
     7400006: hit
-    7400008: idle
-    7400010: run
+    7400008: CyclopsIdle
+    7400010: CyclopsRun
     7400012: stunned_idle
     7400014: stunned_idle_hit
-    7400016: walk
+    7400016: CyclopsWalk
     9500000: //RootNode
     11100000: //RootNode
     13700000: Cyclop
@@ -155,7 +155,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: attack_1
+      name: CyclopsAttack
       takeName: attack_1
       firstFrame: 0
       lastFrame: 48
@@ -447,7 +447,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: death
+      name: CyclopsDie
       takeName: death
       firstFrame: 0
       lastFrame: 51
@@ -739,7 +739,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: idle
+      name: CyclopsIdle
       takeName: idle
       firstFrame: 0
       lastFrame: 34
@@ -885,7 +885,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: run
+      name: CyclopsRun
       takeName: run
       firstFrame: 0
       lastFrame: 22
@@ -1323,7 +1323,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: walk
+      name: CyclopsWalk
       takeName: walk
       firstFrame: 0
       lastFrame: 29

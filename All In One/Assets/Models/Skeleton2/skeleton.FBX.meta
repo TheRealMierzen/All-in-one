@@ -82,12 +82,12 @@ ModelImporter:
     400074: //RootNode
     400076: skeleton
     4300000: skeleton
-    7400000: idle
-    7400002: run
+    7400000: NormalSkeletonIdle
+    7400002: NormalSkeletonRun
     7400004: waitingforbattle
-    7400006: attack
+    7400006: NormalSkeletonAttack
     7400008: gethit
-    7400010: die
+    7400010: NormalSkeletonDie
     7400012: dance
     11100000: //RootNode
     13700000: skeleton
@@ -108,7 +108,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: idle
+      name: NormalSkeletonIdle
       takeName: 
       firstFrame: 0
       lastFrame: 240
@@ -134,7 +134,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: run
+      name: NormalSkeletonRun
       takeName: 
       firstFrame: 241
       lastFrame: 263
@@ -186,7 +186,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: attack
+      name: NormalSkeletonAttack
       takeName: 
       firstFrame: 315
       lastFrame: 350
@@ -238,7 +238,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: die
+      name: NormalSkeletonDie
       takeName: 
       firstFrame: 387
       lastFrame: 457

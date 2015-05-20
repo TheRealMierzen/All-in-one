@@ -144,23 +144,23 @@ ModelImporter:
     400136: spinecontrol
     400138: top
     4300000: mesh
-    7400000: monster2Idle
-    7400002: monster2WalkForward
-    7400004: monster2Run
+    7400000: DarklingBigIdle
+    7400002: DarklingBigWalk
+    7400004: DarklingBigRun
     7400006: monster2WalkRight
     7400008: monster2WalkLet
     7400010: monster2WalkBack
     7400012: monster2Jump
     7400014: monster2InAir
     7400016: monster2Land
-    7400018: monster2Roar
-    7400020: monster2Attack1
+    7400018: DarklingBigRoar
+    7400020: DarklingBigAttack
     7400022: monster2attack2
     7400024: monster2Attack3
     7400026: monster2GrabAttack
     7400028: monster2Hit1
     7400030: monster2Hit2
-    7400032: monster2Die
+    7400032: DarklingBigDie
     7400034: testallAnims
     9500000: //RootNode
     11100000: //RootNode
@@ -182,15 +182,15 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: monster2Idle
+      name: DarklingBigIdle
       takeName: C4D Animation Take
       firstFrame: 0
       lastFrame: 88
-      wrapMode: 0
+      wrapMode: 2
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
-      loop: 0
+      loop: 1
       loopTime: 1
       loopBlend: 1
       loopBlendOrientation: 1
@@ -348,15 +348,15 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: monster2WalkForward
+      name: DarklingBigWalk
       takeName: C4D Animation Take
       firstFrame: 90
       lastFrame: 120
-      wrapMode: 0
+      wrapMode: 2
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
-      loop: 0
+      loop: 1
       loopTime: 1
       loopBlend: 1
       loopBlendOrientation: 0
@@ -514,7 +514,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: monster2Run
+      name: DarklingBigRun
       takeName: C4D Animation Take
       firstFrame: 121
       lastFrame: 150
@@ -1676,7 +1676,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: monster2Roar
+      name: DarklingBigRoar
       takeName: C4D Animation Take
       firstFrame: 288
       lastFrame: 320
@@ -1842,7 +1842,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: monster2Attack1
+      name: DarklingBigAttack
       takeName: C4D Animation Take
       firstFrame: 321
       lastFrame: 365
@@ -2838,7 +2838,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: monster2Die
+      name: DarklingBigDie
       takeName: C4D Animation Take
       firstFrame: 484
       lastFrame: 506

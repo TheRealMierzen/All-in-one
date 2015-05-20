@@ -10,7 +10,7 @@ TagManager:
   - TDControl
   - Dead
   - cTowerGround
-  - cZombieGround
+  - Enemy
   layers:
   - Default
   - TransparentFX

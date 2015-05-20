@@ -167,7 +167,7 @@ ModelImporter:
     4300002: mace
     4300004: armor
     4300006: body
-    7400000: monster1Idle
+    7400000: DarklingIdle
     7400002: monster1WalkNormal
     7400004: monster1Run
     7400006: monster1Jump
@@ -200,7 +200,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: monster1Idle
+      name: DarklingIdle
       takeName: C4D Animation Take
       firstFrame: 0
       lastFrame: 87

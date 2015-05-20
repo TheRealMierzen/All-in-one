@@ -143,6 +143,11 @@ public class Health : MonoBehaviour {
 			maxHealth = 500;
 			goldWorth = 50;
 			break;
+
+		case "Spider":
+			maxHealth = 100;
+			goldWorth = 50;
+			break;
 		case "Crashed":
 			//do nothing
 			break;

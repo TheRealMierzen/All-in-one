@@ -142,22 +142,22 @@ ModelImporter:
     400134: //RootNode
     400136: SM_Skeleton_Base
     4300000: SM_Skeleton_Base
-    7400000: Death
+    7400000: FastSkeletonDie
     7400002: Hit
     7400004: Hit2
-    7400006: Idle
+    7400006: FastSkeletonIdle
     7400008: Idle2
     7400010: IdleHoldSword
     7400012: Jump
     7400014: Resurrection
-    7400016: Run
+    7400016: FastSkeletonRun
     7400018: StandUp01
     7400020: StandUp02
     7400022: StandUp03
     7400024: SwingHeavy
-    7400026: SwingNormal
+    7400026: FastSkeletonAttack
     7400028: SwingQuick
-    7400030: Walk01
+    7400030: FastSkeletonWalk
     7400032: Walk02
     7400034: WalkBack
     7400036: WalkLeft
@@ -186,7 +186,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Death
+      name: FastSkeletonDie
       takeName: Take 001
       firstFrame: 0
       lastFrame: 48
@@ -678,7 +678,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Idle
+      name: FastSkeletonIdle
       takeName: Take 001
       firstFrame: 190
       lastFrame: 460
@@ -1498,7 +1498,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Run
+      name: FastSkeletonRun
       takeName: Take 001
       firstFrame: 814
       lastFrame: 831
@@ -2318,7 +2318,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: SwingNormal
+      name: FastSkeletonAttack
       takeName: Take 001
       firstFrame: 1013
       lastFrame: 1103
@@ -2646,7 +2646,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Walk01
+      name: FastSkeletonWalk
       takeName: Take 001
       firstFrame: 1143
       lastFrame: 1174

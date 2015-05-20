@@ -126,10 +126,10 @@ ModelImporter:
     400118: Creature:root9
     400120: Creature:tail
     4300000: Creature:polymsh
-    7400000: Idle
-    7400002: Walk
-    7400004: Attack
-    7400006: Dead
+    7400000: CaveWormIdle
+    7400002: CaveWormWalk
+    7400004: CaveWormAttack
+    7400006: CaveWormDie
     9500000: //RootNode
     11100000: //RootNode
     13700000: Creature:polymsh
@@ -150,7 +150,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Idle
+      name: CaveWormIdle
       takeName: Take 001
       firstFrame: 60
       lastFrame: 90
@@ -298,7 +298,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Walk
+      name: CaveWormWalk
       takeName: Take 001
       firstFrame: 5
       lastFrame: 25
@@ -446,7 +446,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Attack
+      name: CaveWormAttack
       takeName: Take 001
       firstFrame: 25
       lastFrame: 60
@@ -594,7 +594,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Dead
+      name: CaveWormDie
       takeName: Take 001
       firstFrame: 95
       lastFrame: 120

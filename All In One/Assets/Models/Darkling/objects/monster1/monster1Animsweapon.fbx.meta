@@ -180,7 +180,7 @@ ModelImporter:
     7400016: monster1WeaponWalkBack
     7400018: monster1WeaponWalkBackRight
     7400020: monster1WeaponWalkBackLeft
-    7400022: monster1WeaponAttack1
+    7400022: DarklingAttack
     7400024: monster1WeaponAttack2
     7400026: monster1WeaponPushback
     7400028: monster1WeaponBlock
@@ -2262,7 +2262,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: monster1WeaponAttack1
+      name: DarklingAttack
       takeName: C4D Animation Take
       firstFrame: 378
       lastFrame: 404

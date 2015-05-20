@@ -109,18 +109,18 @@ ModelImporter:
     4300002: staff_skull
     4300004: Cube
     7400000: All
-    7400002: Idle1
+    7400002: NecromancerIdle
     7400004: Idle2
     7400006: Take
     7400008: Sits
     7400010: Up
-    7400012: Walk
-    7400014: Run
-    7400016: Magic Attack
+    7400012: NecromancerWalk
+    7400014: NecromancerRun
+    7400016: NecromancerAttack
     7400018: Magic Attack2
     7400020: Magic Attack3
     7400022: Attack
-    7400024: Death1
+    7400024: NecromancerDie
     7400026: Death2
     9500000: //RootNode
     11100000: //RootNode
@@ -168,7 +168,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Idle1
+      name: NecromancerIdle
       takeName: Take 001
       firstFrame: 0
       lastFrame: 120
@@ -298,7 +298,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Walk
+      name: NecromancerWalk
       takeName: Take 001
       firstFrame: 471
       lastFrame: 509
@@ -324,7 +324,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Run
+      name: NecromancerRun
       takeName: Take 001
       firstFrame: 511
       lastFrame: 549
@@ -350,7 +350,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Magic Attack
+      name: NecromancerAttack
       takeName: Take 001
       firstFrame: 551
       lastFrame: 660
@@ -454,7 +454,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Death1
+      name: NecromancerDie
       takeName: Take 001
       firstFrame: 1021
       lastFrame: 1095
