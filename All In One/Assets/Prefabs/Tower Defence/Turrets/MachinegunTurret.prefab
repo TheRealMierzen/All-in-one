@@ -96,6 +96,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 425504}
   - 95: {fileID: 9557352}
+  - 65: {fileID: 6538300}
   m_Layer: 0
   m_Name: MachinegunTurret
   m_TagString: Untagged
@@ -148,7 +149,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184922}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .75999999, y: 1002.31, z: 1046.26001}
+  m_LocalPosition: {x: -415.064087, y: 1003.89679, z: 375.621124}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 475086}
@@ -335,6 +336,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143928}
   m_Mesh: {fileID: 4300004, guid: d148bd46a5a4c4e4d96a7c02442100fc, type: 3}
+--- !u!65 &6538300
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184922}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .800000012, y: .800000012, z: .800000012}
+  m_Center: {x: 0, y: .400000006, z: 0}
 --- !u!82 &8250650
 AudioSource:
   m_ObjectHideFlags: 1

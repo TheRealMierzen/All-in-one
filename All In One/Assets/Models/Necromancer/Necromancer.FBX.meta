@@ -112,7 +112,7 @@ ModelImporter:
     7400002: NecromancerIdle
     7400004: Idle2
     7400006: Take
-    7400008: Sits
+    7400008: NecromancerSit
     7400010: Up
     7400012: NecromancerWalk
     7400014: NecromancerRun
@@ -246,7 +246,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Sits
+      name: NecromancerSit
       takeName: Take 001
       firstFrame: 316
       lastFrame: 440

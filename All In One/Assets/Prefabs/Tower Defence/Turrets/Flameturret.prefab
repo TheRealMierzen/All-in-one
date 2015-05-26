@@ -45,6 +45,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 460102}
   - 95: {fileID: 9528018}
+  - 65: {fileID: 6518172}
   m_Layer: 0
   m_Name: Flameturret
   m_TagString: Untagged
@@ -117,7 +118,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 171746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.3299999, y: 1000.01001, z: 1012}
+  m_LocalPosition: {x: -411.705933, y: 1003.89679, z: 375.810699}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 452202}
@@ -243,6 +244,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 172490}
   m_Mesh: {fileID: 4300000, guid: c9b4f0b4197c0624e8dfcc44e866fe9b, type: 3}
+--- !u!65 &6518172
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 171746}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .800000012, y: .899999976, z: .800000012}
+  m_Center: {x: 0, y: .449999988, z: 0}
 --- !u!82 &8294314
 AudioSource:
   m_ObjectHideFlags: 1

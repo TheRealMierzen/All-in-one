@@ -9,6 +9,7 @@ public class Spawning : MonoBehaviour {
 	float waveEnemyCount;
 	int   waveEnemy;
 	public int   waveCount;
+	public bool canSpawn;
 
 	public int   numAlive;	
 	public GameObject[] enemies = new GameObject[7] ;
@@ -26,7 +27,8 @@ public class Spawning : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		
+
+		canSpawn = false;
 		
 		spawnRate = 2f;
 		difficulty = 1;
@@ -49,42 +51,48 @@ public class Spawning : MonoBehaviour {
 	void Update () {
 
 
-		if ((Time.time > lastSpawnTime + spawnRate) && (waveEnemyCount > 0)) {
+		if (canSpawn == true) {
+
+
+			if ((Time.time > lastSpawnTime + spawnRate) && (waveEnemyCount > 0)) {
 				
-			spawnEnemy ();
-
-		}
-
-		if (numAlive == 0) {
-
-			finishWave ();
-
-		}
-
-		//Should never be less than -1
-		if (numAlive < -1) {
-
-			numAlive = -1;
-		}
-
-
-		if ((Time.time > waveFinishTime + waveDelay) && (numAlive == -1)) {
-
-			waveCount += 1;
-			waveStartTime = Time.time;
-			if (waveCount >= 10 ){
-
-				spawnRate = 1.5f;
-
-				if (waveCount >= 20){
-					spawnRate = 1f;
-				}
+				spawnEnemy ();
 
 			}
 
-			waveEnemyCount = Mathf.Round(difficulty * (int)10);
-			numAlive = (int)waveEnemyCount;
+			if (numAlive == 0) {
 
+				finishWave ();
+
+			}
+
+			//Should never be less than -1
+			if (numAlive < -1) {
+
+				numAlive = -1;
+			}
+
+
+			if ((Time.time > waveFinishTime + waveDelay) && (numAlive == -1)) {
+
+				waveCount += 1;
+				waveStartTime = Time.time;
+				if (waveCount >= 10) {
+
+					spawnRate = 1.5f;
+
+					if (waveCount >= 20) {
+						spawnRate = 1f;
+					}
+
+				}
+
+				waveEnemyCount = Mathf.Round (difficulty * (int)10);
+				numAlive = (int)waveEnemyCount;
+
+			}
+		
+	
 		}
 	
 	}

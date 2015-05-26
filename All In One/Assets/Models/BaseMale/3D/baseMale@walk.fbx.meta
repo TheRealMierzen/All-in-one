@@ -93,6 +93,7 @@ ModelImporter:
     400086: Bip01 Spine1
     4300000: baseMale
     7400000: BruteWalk
+    9500000: //RootNode
     11100000: //RootNode
     13700000: baseMale
   materials:
@@ -116,11 +117,11 @@ ModelImporter:
       takeName: Take 001
       firstFrame: 0
       lastFrame: 30
-      wrapMode: 0
+      wrapMode: 2
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
-      loop: 0
+      loop: 1
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0

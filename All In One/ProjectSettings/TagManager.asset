@@ -4,13 +4,16 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Slayer
-  - Ground
-  - TEnemy
-  - TDControl
-  - Dead
-  - cTowerGround
+  - AlarmLight
   - Enemy
+  - MainLight
+  - Fader
+  - WayPoint
+  - Siren
+  - Alarm
+  - TDControl
+  - TEnemy
+  - Dead
   layers:
   - Default
   - TransparentFX
@@ -20,8 +23,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - PlayArea
+  - Extents
   - 
   - 
   - 

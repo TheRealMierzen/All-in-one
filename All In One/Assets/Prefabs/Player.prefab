@@ -17,7 +17,7 @@ GameObject:
   - 114: {fileID: 11461202}
   - 114: {fileID: 11402986}
   - 114: {fileID: 11455176}
-  - 114: {fileID: 11410342}
+  - 114: {fileID: 11461708}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -70,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 129932}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.69000006, y: 1002.03003, z: 18.5200005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 429934}
@@ -110,7 +110,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .19166474, g: .301966369, b: .474509805, a: 1}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -126,7 +126,7 @@ Camera:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: -1
+  m_RenderingPath: 3
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_HDR: 0
@@ -230,21 +230,6 @@ MonoBehaviour:
   death: {fileID: 0}
   die: {fileID: 0}
   goldWorth: 0
---- !u!114 &11410342
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 129932}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 368f7fd0aca743941a4ebdc49e520676, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Turret: {fileID: 158626, guid: 7bab640a192f226428d40d4706610766, type: 2}
-  rayLength: 0
-  placePos: {x: 0, y: 0, z: 0}
-  look: {fileID: 2029936}
 --- !u!114 &11429930
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -372,6 +357,18 @@ MonoBehaviour:
   player: {fileID: 129932}
   spawn: 
   spawnLocation: {x: 1.37023902, y: 1003.83002, z: 1029.62598}
+--- !u!114 &11461708
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94bac588453289745b0a517b2e8c8f2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tower: {fileID: 184922, guid: fae164dd5ca5a0e4bbd2449775c6b2aa, type: 2}
 --- !u!124 &12429936
 Behaviour:
   m_ObjectHideFlags: 1

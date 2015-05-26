@@ -61,6 +61,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 441222}
   - 95: {fileID: 9588274}
+  - 65: {fileID: 6571428}
   m_Layer: 0
   m_Name: LongRangeSplash
   m_TagString: Untagged
@@ -99,7 +100,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 152744}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 270.779083, y: 1000.00226, z: 1114.56396}
+  m_LocalPosition: {x: -412.443726, y: 1003.89679, z: 375.748047}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 473010}
@@ -212,6 +213,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125670}
   m_Mesh: {fileID: 4300004, guid: 36215181e56dda44b8bb066f0715cfd9, type: 3}
+--- !u!65 &6571428
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152744}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .800000012, y: .899999976, z: .800000012}
+  m_Center: {x: 0, y: .449999988, z: 0}
 --- !u!95 &9588274
 Animator:
   serializedVersion: 3
