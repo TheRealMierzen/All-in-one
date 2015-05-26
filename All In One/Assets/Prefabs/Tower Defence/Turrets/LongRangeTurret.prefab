@@ -75,7 +75,7 @@ GameObject:
   - 95: {fileID: 9544200}
   - 65: {fileID: 6590668}
   m_Layer: 0
-  m_Name: LongRangeTurret 1
+  m_Name: LongRangeTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -70,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 129932}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.69000006, y: 1002.03003, z: 18.5200005}
+  m_LocalPosition: {x: -325.335785, y: 1000, z: 400.828827}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 429934}
@@ -368,7 +368,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94bac588453289745b0a517b2e8c8f2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tower: {fileID: 184922, guid: fae164dd5ca5a0e4bbd2449775c6b2aa, type: 2}
+  Towers:
+  - {fileID: 184922, guid: fae164dd5ca5a0e4bbd2449775c6b2aa, type: 2}
+  - {fileID: 113266, guid: 2771107d6d9332344b3cec09610184b9, type: 2}
+  - {fileID: 171746, guid: a3e786a29e0618047b20784959197ea6, type: 2}
+  - {fileID: 158626, guid: 7bab640a192f226428d40d4706610766, type: 2}
+  - {fileID: 152744, guid: 86332dc3b342d1443ad9ad0a01fe1ae4, type: 2}
+  - {fileID: 194852, guid: c9bdd5c3efe01f748bdfc0778d77fadc, type: 2}
 --- !u!124 &12429936
 Behaviour:
   m_ObjectHideFlags: 1

@@ -2,14 +2,6 @@
 using System.Collections;
 
 public class blockStatus : MonoBehaviour {
-	
-	public bool occupied;
-
-	void Awake() {
-
-		occupied = false;
-
-	}
 
 	//Check if object is above block, if not block is unoccupied, if unoccupied can spawn tower
 	public bool checkStatus () {

@@ -149,7 +149,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 194852}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -412.920166, y: 1003.89679, z: 375.799377}
+  m_LocalPosition: {x: -32.87714, y: 1000.00684, z: 28.051857}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 426672}
@@ -687,7 +687,7 @@ ParticleSystem:
     serializedVersion: 2
     enabled: 1
     type: 0
-    radius: .280000001
+    radius: .100000001
     angle: 25
     length: 5
     boxX: 1
@@ -743,14 +743,14 @@ ParticleSystem:
     time3: 0
     m_BurstCount: 0
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       scalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 1
+          value: .285713971
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -1501,7 +1501,7 @@ ParticleSystemRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 6aff658bc7944a445bc484f843f91b38, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -1515,8 +1515,8 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_RenderMode: 0
-  m_MaxParticleSize: .5
+  m_RenderMode: 4
+  m_MaxParticleSize: .300000012
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
