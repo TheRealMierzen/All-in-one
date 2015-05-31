@@ -35,6 +35,16 @@ public class Health : MonoBehaviour {
 	void Update () {
 
 
+		if (currentHealth <= 0) {
+
+			character.GetComponent<NavMeshAgent>().enabled = false;
+			if (die != null)
+				character.GetComponent<Animation>().Play (die.name);
+
+			Destroy (character, 1f);
+
+		}
+
 	
 	}
 
@@ -176,14 +186,12 @@ public class Health : MonoBehaviour {
 
 			control.GetComponent<Spawning>().numAlive -= 1;
 			//tAudio.Play ();
-			character.GetComponent<NavMeshAgent>().enabled = false;
-			if (die != null)
-				character.GetComponent<Animation>().Play (die.name);
+
 
 			GameObject.Find ("TD_Control").GetComponent<goldManager>().addGold (goldWorth);
 			GameObject.Find ("TD_Control").GetComponent<killsManager>().addKill();
 
-			Destroy (this.gameObject,1f);
+			Destroy (character);
 
 
 

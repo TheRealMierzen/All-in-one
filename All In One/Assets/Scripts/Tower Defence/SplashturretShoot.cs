@@ -133,7 +133,7 @@ public class SplashturretShoot : MonoBehaviour {
 			Vector3 diff = position - enemy.transform.position;
 			float curDistance = diff.magnitude;
 			
-			if (curDistance < distance) {
+			if (curDistance < distance && enemy.tag != "Dead") {
 				
 				Target = enemy;
 				distance = curDistance;

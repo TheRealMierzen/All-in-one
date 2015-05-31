@@ -4,20 +4,27 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour {
 
-	//public GameObject panel;
+	public static GameObject PauseScreen;
+	public static GameObject UI;
 	public static bool paused = false;
 
 
 
-	void Start (){
+	void Awake(){
+		//UnityEngine.GameObject UI = GameObject.FindWithTag ("UI");
+		PauseScreen = GameObject.Find ("PauseScreen");
+		UI = GameObject.Find ("UI");
+		UI.SetActive (true);
 
-		//panel = GameObject.Find ("pausePanel");
+		PauseScreen.GetComponent<Canvas>().enabled = false;
+
+
 	}
-
+	
 	void Update()
 	{
 		if (Input.GetButtonDown ("Pause")) {
-			paused = togglePause ();
+			togglePause ();
 		}
 	}
 	
@@ -32,31 +39,38 @@ public class PauseMenu : MonoBehaviour {
 		}
 	}
 	
-	public static bool togglePause()
+	public void togglePause()
 	{
 		//GameObject panel = GameObject.Find ("pausePanel");
 
 		if(Time.timeScale == 0f)
 		{
-			Debug.Log ("unpause");
 			Time.timeScale = 1f;
 			Cursor.visible = false;
-			GameObject.Find ("pausePanel").SetActive (false);
-			//panel.SetActive (false);
-			return(false);
+			PauseScreen.GetComponent<Canvas>().enabled = false;
+			UI.SetActive (true);
+			//UI.GetComponent<Canvas>().enabled = true;
+			paused = false;
+			//return(false);
 		}
 		else
 		{
-			Debug.Log ("pause");
 			Time.timeScale = 0f;
 			Cursor.visible = true;
-			GameObject.Find ("pausePanel").SetActive (true);
-			//panel.SetActive (true);
-			return(true);    
+			UI.SetActive (false);
+			//UI.GetComponent<Canvas>().enabled = false;
+			PauseScreen.GetComponent<Canvas>().enabled = true;
+			paused = true;
+			//return(true);    
 		}
 	}
 
 
+	public void Quit(){
+		Time.timeScale = 1f;
+		Application.Quit();
 
+
+	}
 
 }

@@ -62,23 +62,6 @@ public class placeTower : MonoBehaviour {
 			
 		}
 
-//		if (Input.GetAxis("Mouse ScrollWheel") >0) // forward
-//		{
-//			selectedTower += 1;
-//
-//			if(selectedTower > 5){
-//				selectedTower = 0;
-//			}
-//		}
-//
-//		if (Input.GetAxis("Mouse ScrollWheel") <0) // back
-//		{
-//			selectedTower -= 1;
-//
-//			if(selectedTower < 0){
-//				selectedTower = 5;
-//			}
-//		}
 
 		//Raycast to see on which block the tower must be placed
 		if (tower != null && Input.GetButton ("Fire1")) {
