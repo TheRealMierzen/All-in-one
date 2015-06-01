@@ -10,7 +10,7 @@ public class goldManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		
-
+		gold = 100;
 		
 	}
 	
@@ -25,7 +25,7 @@ public class goldManager : MonoBehaviour {
 	public void addGold(int ammount){
 		
 		
-		gold = gold + ammount;
+		gold += ammount;
 		
 	}
 }

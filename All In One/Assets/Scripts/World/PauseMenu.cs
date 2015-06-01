@@ -11,13 +11,12 @@ public class PauseMenu : MonoBehaviour {
 
 
 	void Awake(){
-		//UnityEngine.GameObject UI = GameObject.FindWithTag ("UI");
+
 		PauseScreen = GameObject.Find ("PauseScreen");
 		UI = GameObject.Find ("UI");
 		UI.SetActive (true);
 
 		PauseScreen.GetComponent<Canvas>().enabled = false;
-
 
 	}
 	
@@ -41,7 +40,6 @@ public class PauseMenu : MonoBehaviour {
 	
 	public void togglePause()
 	{
-		//GameObject panel = GameObject.Find ("pausePanel");
 
 		if(Time.timeScale == 0f)
 		{
@@ -49,19 +47,15 @@ public class PauseMenu : MonoBehaviour {
 			Cursor.visible = false;
 			PauseScreen.GetComponent<Canvas>().enabled = false;
 			UI.SetActive (true);
-			//UI.GetComponent<Canvas>().enabled = true;
 			paused = false;
-			//return(false);
 		}
 		else
 		{
 			Time.timeScale = 0f;
 			Cursor.visible = true;
 			UI.SetActive (false);
-			//UI.GetComponent<Canvas>().enabled = false;
 			PauseScreen.GetComponent<Canvas>().enabled = true;
-			paused = true;
-			//return(true);    
+			paused = true;   
 		}
 	}
 

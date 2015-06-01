@@ -17,7 +17,7 @@ public class MachineGunShoot : MonoBehaviour {
 	float fireRate = 3f;
 	float range = 10f;
 	float rotationSpeed = 30f;
-	public float damage = 20f;
+	public float damage = 15f;
 	float lastShotTime = float.MinValue;
 	
 	

@@ -68670,6 +68670,8 @@ GameObject:
   - 114: {fileID: 1916715135}
   - 114: {fileID: 1916715137}
   - 114: {fileID: 1916715138}
+  - 114: {fileID: 1916715140}
+  - 114: {fileID: 1916715139}
   m_Layer: 0
   m_Name: TD_Control
   m_TagString: TDControl
@@ -68717,7 +68719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveCount: 0
-  canSpawn: 0
+  canSpawn: 1
   numAlive: 0
   enemies:
   - {fileID: 116028, guid: 272648dce8c53cb4f83a5fd1907c69ab, type: 2}
@@ -68764,6 +68766,32 @@ MonoBehaviour:
   startTime: 0
   startPortal: {fileID: 1134644715}
   endPortal: {fileID: 1781834975}
+--- !u!114 &1916715139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1916715133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4421a4b7b4468c4c83f230a9d821638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kills: 0
+  tKills: {fileID: 754321887}
+--- !u!114 &1916715140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1916715133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 768381566c493e447b225bc908bf3f8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gold: 100
+  tGold: {fileID: 286099189}
 --- !u!1 &1916736563
 GameObject:
   m_ObjectHideFlags: 0

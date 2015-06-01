@@ -29,8 +29,6 @@ public class placeTower : MonoBehaviour {
 			tower = Towers[selectedTower];
 		}
 
-		Debug.Log (Towers[selectedTower].name);
-
 		if (Input.GetKeyUp (KeyCode.Alpha1)) {
 
 			selectedTower = 0;
@@ -63,16 +61,17 @@ public class placeTower : MonoBehaviour {
 		}
 
 
-		//Raycast to see on which block the tower must be placed
+		//Raycast to see on which block the tower should be placed
 		if (tower != null && Input.GetButton ("Fire1")) {
 
 			RaycastHit target;
 
 			if (Physics.Raycast (transform.position,transform.forward,out target,10f)){
 
-				if(target.collider.gameObject.GetComponent<blockStatus>().checkStatus () == false){
+				if(target.collider.gameObject.GetComponent<blockStatus>().checkStatus () == false && GameObject.Find("TD_Control").GetComponent<goldManager>().gold >= towerCost[selectedTower]){
 
 					Instantiate (tower,target.transform.position + new Vector3(0f,1.3f,0f),Quaternion.identity);
+					GameObject.Find("TD_Control").GetComponent<goldManager>().gold -= towerCost[selectedTower];
 
 				}
 

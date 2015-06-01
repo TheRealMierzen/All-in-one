@@ -24,7 +24,6 @@ public class killsManager : MonoBehaviour {
 
 	public void addKill(){
 
-
 		kills += 1;
 
 	}

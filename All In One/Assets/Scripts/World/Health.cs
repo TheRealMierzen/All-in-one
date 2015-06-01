@@ -16,8 +16,7 @@ public class Health : MonoBehaviour {
 	public AudioSource tAudio;
 	public AudioClip death;
 	public Animation die;
-	float  healthBarLength;
-
+	ParticleSystem fade;
 
 	public int goldWorth;
 
@@ -36,6 +35,9 @@ public class Health : MonoBehaviour {
 
 
 		if (currentHealth <= 0) {
+
+			GameObject.Find ("TD_Control").GetComponent<goldManager>().addGold (goldWorth);
+			GameObject.Find ("TD_Control").GetComponent<killsManager>().addKill();
 
 			character.GetComponent<NavMeshAgent>().enabled = false;
 			if (die != null)
@@ -167,7 +169,6 @@ public class Health : MonoBehaviour {
 		}
 		
 		currentHealth = maxHealth;
-		healthBarLength = currentHealth / maxHealth;
 
 	}
 
@@ -177,7 +178,6 @@ public class Health : MonoBehaviour {
 
 
 		currentHealth = currentHealth - damage;
-		healthBarLength = currentHealth / maxHealth;
 
 		if (currentHealth <= 0) {
 			character.tag = "Dead";
@@ -188,8 +188,7 @@ public class Health : MonoBehaviour {
 			//tAudio.Play ();
 
 
-			GameObject.Find ("TD_Control").GetComponent<goldManager>().addGold (goldWorth);
-			GameObject.Find ("TD_Control").GetComponent<killsManager>().addKill();
+
 
 			Destroy (character);
 
