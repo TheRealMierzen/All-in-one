@@ -20,6 +20,7 @@ public class LongRangeShoot : MonoBehaviour {
 	LineRenderer line;
 	public GameObject GunTip;
 	public GameObject hitLight;
+	string turretType   = "Electric"; 
 
 		
 
@@ -98,7 +99,7 @@ public class LongRangeShoot : MonoBehaviour {
 			StopCoroutine("FireLaser");
 			StartCoroutine("FireLaser");
 			tAudio.Play ();
-			Target.GetComponent<Health>().ApplyDamage (damage,Turret);
+			Target.GetComponent<Health>().ApplyDamage (damage,Turret,turretType);
 
 			if (Target.GetComponent<Health>().currentHealth <=0){
 				tAudio.Stop ();

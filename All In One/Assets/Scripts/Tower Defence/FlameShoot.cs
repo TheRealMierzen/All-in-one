@@ -18,6 +18,7 @@ public class FlameShoot : MonoBehaviour {
 	public float damage = 15f;
 	float lastShotTime = float.MinValue;
 	ParticleSystem fire;
+	string turretType   = "Fire"; 
 	
 	
 	
@@ -102,7 +103,7 @@ public class FlameShoot : MonoBehaviour {
 			
 			lastShotTime = Time.time;
 			tAudio.Play ();
-			Target.GetComponent<Health>().ApplyDamage (damage,Turret);
+			Target.GetComponent<Health>().ApplyDamage (damage,Turret,turretType);
 			
 			if (Target.GetComponent<Health>().currentHealth <=0){
 				tAudio.Stop ();

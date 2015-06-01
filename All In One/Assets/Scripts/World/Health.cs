@@ -19,6 +19,7 @@ public class Health : MonoBehaviour {
 	ParticleSystem fade;
 
 	public int goldWorth;
+	string Type;
 
 	// Use this for initialization
 	void Start () {
@@ -34,7 +35,7 @@ public class Health : MonoBehaviour {
 	void Update () {
 
 
-		if (currentHealth <= 0) {
+		if (currentHealth <= 0 && characterType != "Player(Clone)") {
 
 			GameObject.Find ("TD_Control").GetComponent<goldManager>().addGold (goldWorth);
 			GameObject.Find ("TD_Control").GetComponent<killsManager>().addKill();
@@ -66,99 +67,118 @@ public class Health : MonoBehaviour {
 			maxHealth = 200;
 			break;
 		
-		case "Brute":
+		case "Brute(Clone)":
 			maxHealth = 300;
 			goldWorth = 30;
+			Type = "Normal";
 			break;
 
-		case "CaveWorm":
+		case "CaveWorm(Clone)":
 			maxHealth = 200;
 			goldWorth = 20;
+			Type = "Normal";
 			break;
 
-		case "Golem":
+		case "Golem(Clone)":
 			maxHealth = 500;
 			goldWorth = 50;
+			Type = "Ice";
 			break;
 
-		case "DarkDemon":
+		case "DarkDemon(Clone)":
 			maxHealth = 600;
 			goldWorth = 50;
+			Type = "Dark";
 			break;
 
-		case "FireDemon":
+		case "FireDemon(Clone)":
 			maxHealth = 600;
 			goldWorth = 50;
+			Type = "Fire";
 			break;
 
-		case "IceDemon":
+		case "IceDemon(Clone)":
 			maxHealth = 600;
 			goldWorth = 50;
+			Type = "Ice";
 			break;
 
-		case "EarthDemon":
+		case "EarthDemon(Clone)":
 			maxHealth = 600;
 			goldWorth = 50;
+			Type = "Nature";
 			break;
 
-		case "Goblin":
+		case "Goblin(Clone)":
 			maxHealth = 300;
 			goldWorth = 50;
+			Type = "Normal";
 			break;
 
-		case "BigGoblin":
+		case "BigGoblin(Clone)":
 			maxHealth = 450;
 			goldWorth = 50;
+			Type = "Armored";
 			break;
 
-		case "NormalSkeleton":
+		case "NormalSkeleton(Clone)":
 			maxHealth = 350;
 			goldWorth = 50;
+			Type = "Dark";
 			break;
 
-		case "FastSkeleton":
+		case "FastSkeleton(Clone)":
 			maxHealth = 250;
 			goldWorth = 50;
+			Type = "Dark";
 			break;
 
-		case "Darkling":
+		case "Darkling(Clone)":
 			maxHealth = 600;
 			goldWorth = 50;
+			Type = "Armored";
 			break;
 
-		case "BigDarkling":
+		case "BigDarkling(Clone)":
 			maxHealth = 800;
 			goldWorth = 50;
+			Type = "Dark";
 			break;
 
-		case "Cyclops":
+		case "Cyclops(Clone)":
 			maxHealth = 550;
 			goldWorth = 50;
+			Type = "Normal";
 			break;
 
-		case "Prowler":
+		case "Prowler(Clone)":
 			maxHealth = 600;
 			goldWorth = 50;
+			Type = "Machine";
 			break;
 
-		case "GreenGoblin":
+		case "GreenGoblin(Clone)":
 			maxHealth = 400;
 			goldWorth = 50;
+			Type = "Nature";
 			break;
 
-		case "BlueGoblin":
+		case "BlueGoblin(Clone)":
 			maxHealth = 450;
 			goldWorth = 50;
+			Type = "Water";
 			break;
 
-		case "RedGoblin":
+		case "RedGoblin(Clone)":
 			maxHealth = 500;
 			goldWorth = 50;
+			Type = "Fire";
 			break;
 
-		case "Spider":
+		case "Spider(Clone)":
 			maxHealth = 100;
 			goldWorth = 50;
+			Type = "Nature";
 			break;
 		case "Crashed":
 			//do nothing
@@ -167,13 +187,46 @@ public class Health : MonoBehaviour {
 			maxHealth = 50;
 			break;
 		}
-		
+
+		if (characterType != "Player(Clone") {
+			maxHealth = maxHealth * (GameObject.Find ("TD_Control").GetComponent<Spawning> ().waveCount) / 10;
+		}
+
+
 		currentHealth = maxHealth;
 
 	}
 
 
-	public void ApplyDamage(float damage,GameObject shooter) {
+	public void ApplyDamage(float damage,GameObject shooter,string turretType) {
+
+
+		if (Type == "Armored" && turretType == "Normal") {
+
+			damage = damage * 0.6f;
+		}
+
+		if (turretType == "Fire" && Type == "Nature" || Type == "Ice") {
+
+			damage = damage * 1.4f;
+
+		}
+
+		if (turretType == "Fire" && Type == "Fire") {
+			
+			damage = damage * 0.6f;
+			
+		}
+
+		if (Type == "Machine" || Type == "Water" && turretType == "Electric") {
+
+			damage = damage * 1.4f;
+		}
+
+		if (Type == "Nature" && turretType == "Electric") {
+
+			damage = damage * 0.6f;
+		}
 
 
 
@@ -187,12 +240,7 @@ public class Health : MonoBehaviour {
 			control.GetComponent<Spawning>().numAlive -= 1;
 			//tAudio.Play ();
 
-
-
-
 			Destroy (character);
-
-
 
 		}
 

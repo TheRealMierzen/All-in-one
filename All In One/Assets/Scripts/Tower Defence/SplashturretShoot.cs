@@ -20,6 +20,7 @@ public class SplashturretShoot : MonoBehaviour {
 	float TargetMovement;
 	public float damage = 10f;
 	public float movement = -10f;
+	string turretType   = "Normal"; 
 
 	
 	
@@ -101,7 +102,7 @@ public class SplashturretShoot : MonoBehaviour {
 			lastShotTime = Time.time;
 			tAudio.Play ();
 			tAudio.Play ();
-			Target.GetComponent<Health>().ApplyDamage (damage,Turret);
+			Target.GetComponent<Health>().ApplyDamage (damage,Turret,turretType);
 			Target.GetComponent<NavMeshAgent>().speed = Target.GetComponent<NavMeshAgent>().speed - 1;
 			if (Target.GetComponent<Health>().currentHealth <=0){
 				tAudio.Stop ();

@@ -18,7 +18,8 @@ public class MachineGunShoot : MonoBehaviour {
 	float range = 10f;
 	float rotationSpeed = 30f;
 	public float damage = 15f;
-	float lastShotTime = float.MinValue;
+	float lastShotTime  = float.MinValue;
+	string turretType   = "Normal"; 
 	
 	
 	
@@ -95,7 +96,7 @@ public class MachineGunShoot : MonoBehaviour {
 			lastShotTime = Time.time;
 			tAudio.Play ();
 			tAudio.Play ();
-			Target.GetComponent<Health>().ApplyDamage (damage,Turret);
+			Target.GetComponent<Health>().ApplyDamage (damage,Turret,turretType);
 			
 			if (Target.GetComponent<Health>().currentHealth <=0){
 
