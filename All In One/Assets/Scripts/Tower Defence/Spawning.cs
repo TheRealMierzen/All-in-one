@@ -33,7 +33,7 @@ public class Spawning : MonoBehaviour {
 		spawnRate = 2f;
 		difficulty = 1;
 		waveCount = 1;
-		waveEnemyCount = Mathf.Round(difficulty * (int)10);
+		waveEnemyCount = Mathf.Round(difficulty * (int)5);
 		numAlive = (int)waveEnemyCount;
 		waveStartTime = Time.time;
 

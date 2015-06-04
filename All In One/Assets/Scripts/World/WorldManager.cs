@@ -10,17 +10,19 @@ public class WorldManager : MonoBehaviour {
 
 	void Awake(){
 
-		if (Application.loadedLevelName != "TD") {
+//		if (Application.loadedLevelName != "MainMenu") {
+//
+//			Application.LoadLevel ("MainMenu");
+//
+//		}
 
-			Application.LoadLevel ("TD");
+		if (Application.loadedLevelName == "TD") {
+			startPortal.GetComponent<EllipsoidParticleEmitter> ().emit = false;
+			endPortal.GetComponent<EllipsoidParticleEmitter> ().emit = false;
 
+			startDelay = 30f;
+			startTime = Time.time;
 		}
-
-		startPortal.GetComponent<EllipsoidParticleEmitter>().emit = false;
-		endPortal.GetComponent<EllipsoidParticleEmitter>().emit = false;
-
-		startDelay = 30f;
-		startTime = Time.time;
 
 	}
 	// Use this for initialization
@@ -48,6 +50,12 @@ public class WorldManager : MonoBehaviour {
 
 			}
 
+		}
+
+		if (Application.loadedLevelName == "MainMenu") {
+			
+			
+			
 		}
 	
 	}

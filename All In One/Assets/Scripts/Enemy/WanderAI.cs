@@ -18,6 +18,7 @@ public class WanderAI : MonoBehaviour {
 	float fieldofViewDegrees = 90f;
 	float range = 2;
 	bool playerInSight;
+	int[] flock = new int[10];
 
 	private SphereCollider col;
 
@@ -196,6 +197,13 @@ public class WanderAI : MonoBehaviour {
 		} else
 			playerInSight = false;
 
+		//If same sort of enemy add to group
+		if (other.gameObject.name == this.gameObject.name && checkIfinFlock (other.gameObject.GetInstanceID()) == false) {
+
+			addToFlock (other.gameObject.GetInstanceID());
+
+		}
+
 	}
 
 	void OnTriggerExit(Collider other){
@@ -206,5 +214,59 @@ public class WanderAI : MonoBehaviour {
 
 		}
 
+		if (other.gameObject.name == this.gameObject.name) {
+
+			if(this.gameObject.GetInstanceID () != flock[0]){
+				Debug.Log (this.gameObject.GetInstanceID ());
+				setDestination (other.gameObject);
+			}else
+				action = "Stay";
+
+		}
+
+
+	}
+
+	bool checkIfinFlock(int InstanceID){
+
+		for (int a = 0; a <= 9; a++) {
+
+			if(flock[a] == InstanceID){
+			
+				return true;
+			}
+
+		}
+
+		return false;
+
+	}
+
+	void addToFlock(int InstanceID){
+
+		for (int a = 0; a<= 9; a++) {
+
+			if(flock[a] == 0){
+
+				int leader = InstanceID;
+
+				flock[a] = InstanceID;
+				Debug.Log ("Added to flock");
+				Debug.Log ("Leader: " + InstanceID);
+				break;
+			}
+
+		}
+
+	}
+
+	void setDestination (GameObject other){
+		
+		xDest = Random.Range (-2, 2);
+		zDest = Random.Range (-2, 2);
+		
+		
+		agent.destination = other.transform.position + new Vector3 (xDest, 0f, zDest);
+		
 	}
 }
