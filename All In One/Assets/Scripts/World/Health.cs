@@ -34,19 +34,19 @@ public class Health : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-
-		if (currentHealth <= 0 && characterType != "Player(Clone)") {
-
-			GameObject.Find ("TD_Control").GetComponent<goldManager>().addGold (goldWorth);
-			GameObject.Find ("TD_Control").GetComponent<killsManager>().addKill();
-
-			character.GetComponent<NavMeshAgent>().enabled = false;
-			if (die != null)
-				character.GetComponent<Animation>().Play (die.name);
-
-			Destroy (character, 1f);
-
-		}
+//
+//		if (currentHealth <= 0 && characterType != "Player(Clone)") {
+//
+//			GameObject.Find ("TD_Control").GetComponent<goldManager>().addGold (goldWorth);
+//			GameObject.Find ("TD_Control").GetComponent<killsManager>().addKill();
+//
+//			character.GetComponent<NavMeshAgent>().enabled = false;
+//			if (die != null)
+//				character.GetComponent<Animation>().Play (die.name);
+//
+//			Destroy (character, 1f);
+//
+//		}
 
 	
 	}
@@ -235,7 +235,8 @@ public class Health : MonoBehaviour {
 		if (currentHealth <= 0) {
 			character.tag = "Dead";
 			control = GameObject.FindGameObjectWithTag ("TDControl");
-
+			GameObject.Find ("TD_Control").GetComponent<goldManager>().addGold (goldWorth);
+			GameObject.Find ("TD_Control").GetComponent<killsManager>().addKill();
 
 			control.GetComponent<Spawning>().numAlive -= 1;
 			//tAudio.Play ();
