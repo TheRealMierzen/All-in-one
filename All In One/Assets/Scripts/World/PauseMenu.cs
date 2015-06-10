@@ -72,4 +72,11 @@ public class PauseMenu : MonoBehaviour {
 
 	}
 
+    public void Retry()
+    {
+        Time.timeScale = 1f;
+        Application.LoadLevel(Application.loadedLevelName);
+        Time.timeScale = 1f;
+    }
+
 }

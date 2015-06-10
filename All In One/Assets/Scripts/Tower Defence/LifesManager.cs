@@ -6,6 +6,8 @@ public class LifesManager : MonoBehaviour {
 
 	public int lifes;
 	public Text tLifes;
+    public Canvas gameOver;
+    public GameObject player;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +20,17 @@ public class LifesManager : MonoBehaviour {
 	void Update () {
 
 		tLifes.text = "Lives: " + lifes;
+
+        if(lifes == 0)
+        {
+            player = GameObject.Find("Player(Clone)");
+            Cursor.visible = true;
+            player.GetComponent<MouseLook>().enabled = false;
+            GameObject.Find("UI").GetComponent<Canvas>().enabled = false;
+            gameOver.GetComponent<Canvas>().enabled = true;
+            Time.timeScale = 0;
+
+        }
 	
 	}
 

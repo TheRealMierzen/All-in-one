@@ -32,7 +32,7 @@ public class batteryCharge : MonoBehaviour {
 		}
 
 
-		if (chargeLevel == 100 && once == 1 && GameObject.Find("EndPortal").GetComponent<LifesManager>().lifes > 0) {
+		if (chargeLevel == 2 && once == 1 && GameObject.Find("EndPortal").GetComponent<LifesManager>().lifes > 0) {
 
 			once = 0;
             GameObject.Instantiate(portal, new Vector3(-477.7548f, 1007.526f, 375.1212f), Quaternion.identity);

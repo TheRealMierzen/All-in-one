@@ -7,16 +7,13 @@ public class WorldManager : MonoBehaviour {
 	public float startTime;
 	public GameObject startPortal;
 	public GameObject endPortal;
+    public Material portalSky;
 
 	void Awake(){
 
-//		if (Application.loadedLevelName != "MainMenu") {
-//
-//			Application.LoadLevel ("MainMenu");
-//
-//		}
+        DontDestroyOnLoad(this.gameObject);
 
-		if (Application.loadedLevelName == "TD") {
+        if (Application.loadedLevelName == "TD") {
 			startPortal.GetComponent<EllipsoidParticleEmitter> ().emit = false;
 			endPortal.GetComponent<EllipsoidParticleEmitter> ().emit = false;
 
@@ -52,13 +49,15 @@ public class WorldManager : MonoBehaviour {
 
 		}
 
-		if (Application.loadedLevelName == "MainMenu") {
-			
-			
-			
-		}
-	
-	}
+        if (Application.loadedLevelName == "PortalRoom")
+        {
+
+            Destroy(GameObject.Find("ExitPortal"),1f);
+            GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Skybox>().material = portalSky;
+
+        }
+
+    }
 	
 
 }
