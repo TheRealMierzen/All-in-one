@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Inventory : MonoBehaviour {
 
-	static string[] pInventory 	   = new string[10];
-	public static int[] 	countInventory = new int[10];
-	public static string[] emptyInventory = new string[10];
+	private List<string> Items = new List<string> ();
+	private List<int> count = new List<int>();
 
 
 	// Use this for initialization
@@ -20,56 +20,21 @@ public class Inventory : MonoBehaviour {
 
 
 
-	public static bool addToInv(string item){
-		bool flag = false;
-		
-		
-		for (int i = 0; i < pInventory.Length -1 ; i++) {
-			//Check if item is in inventory
-			if (pInventory[i] == item){
-				
-				countInventory[i] += 1;
-				flag = true;
-				Debug.Log ("Added " + item + " to inventory");
-				return true;
-				
-			}else if((pInventory[i] == "") || pInventory[i] == null)  {
-				
-				emptyInventory[i] = "Empty";
-				
-			}
-			
-		}
+	public static void addToInventory(string item,List<string> playerList){
+
+		bool added = false;
+
+		//Check for item in inventory
+		//for(int a = 0; a <= playerList.
+
+		//Check for open spaces in inventory
 
 
-		//If not in inventory, find empty spot
-		if (flag == false) {
-			
-			for (int e = 0; e < emptyInventory.Length -1; e++) {
-				
-				if (emptyInventory [e] == "Empty") {
-					
-					pInventory [e] = item;
-					countInventory [e] = 1;
-					emptyInventory [e] = "";
-					flag = true;
-					Debug.Log ("Added " + item + " to inventory");
-					return true;
-					
-				} 
-				
-			}
-	
-		} else {
-
-			return false;
-
-		}
+		//Add item to inventory
 
 
-		return false;
-		
-		
+		//Add item to heap
+
 	}
 
 

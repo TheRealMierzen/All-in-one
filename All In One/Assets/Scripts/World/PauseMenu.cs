@@ -7,7 +7,7 @@ public class PauseMenu : MonoBehaviour {
 	public static GameObject PauseScreen;
 	public static GameObject UI;
 	public static bool paused = false;
-
+	public GameObject player;
 
 
 	void Awake(){
@@ -15,6 +15,7 @@ public class PauseMenu : MonoBehaviour {
 		PauseScreen = GameObject.Find ("PauseScreen");
 		UI = GameObject.Find ("UI");
 		UI.SetActive (true);
+
 
 		PauseScreen.GetComponent<Canvas>().enabled = false;
 
@@ -24,6 +25,7 @@ public class PauseMenu : MonoBehaviour {
 	{
 		if (Input.GetButtonDown ("Pause")) {
 			togglePause ();
+
 		}
 	}
 	
@@ -40,10 +42,12 @@ public class PauseMenu : MonoBehaviour {
 	
 	public void togglePause()
 	{
+		player = GameObject.Find ("Player(Clone)");
 
 		if(Time.timeScale == 0f)
 		{
 			Time.timeScale = 1f;
+			player.GetComponent<MouseLook>().enabled = true;
 			Cursor.visible = false;
 			PauseScreen.GetComponent<Canvas>().enabled = false;
 			UI.SetActive (true);
@@ -52,6 +56,7 @@ public class PauseMenu : MonoBehaviour {
 		else
 		{
 			Time.timeScale = 0f;
+			player.GetComponent<MouseLook>().enabled = false;
 			Cursor.visible = true;
 			UI.SetActive (false);
 			PauseScreen.GetComponent<Canvas>().enabled = true;

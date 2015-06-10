@@ -124,7 +124,6 @@ public class MachineGunShoot : MonoBehaviour {
 		
 		
 		foreach (GameObject enemy in enemies) {
-			
 			Vector3 diff = position - enemy.transform.position;
 			float curDistance = diff.magnitude;
 			

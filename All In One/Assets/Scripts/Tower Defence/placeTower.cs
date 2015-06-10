@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class placeTower : MonoBehaviour {
 
@@ -7,7 +8,8 @@ public class placeTower : MonoBehaviour {
 	public GameObject[] Towers = new GameObject[6]; 
 	int[]  towerCost = new int[6];
 	int    selectedTower;
-
+//	Sprite image;
+//	public Image  show;
 	// Use this for initialization
 	void Awake () {
 
@@ -19,6 +21,8 @@ public class placeTower : MonoBehaviour {
 		towerCost[5] = 100;
 
 		selectedTower = 0;
+
+
 	
 	}
 	
@@ -59,6 +63,9 @@ public class placeTower : MonoBehaviour {
 			selectedTower = 5;
 			
 		}
+		//Get texture of turret and appply it to button
+//		image = Sprite.Create (AssetPreview.GetAssetPreview (tower),new Rect (-409,-282,AssetPreview.GetAssetPreview (tower).width,AssetPreview.GetAssetPreview (tower).height),new Vector2(0,0));
+//		show.GetComponent<Image>().sprite  = image;
 
 
 		//Raycast to see on which block the tower should be placed

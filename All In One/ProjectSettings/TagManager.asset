@@ -15,6 +15,7 @@ TagManager:
   - TEnemy
   - Dead
   - UI
+  - ExitPortal
   layers:
   - Default
   - TransparentFX

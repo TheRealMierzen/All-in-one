@@ -103,7 +103,7 @@ public class SplashturretShoot : MonoBehaviour {
 			tAudio.Play ();
 			tAudio.Play ();
 			Target.GetComponent<Health>().ApplyDamage (damage,Turret,turretType);
-			Target.GetComponent<NavMeshAgent>().speed = Target.GetComponent<NavMeshAgent>().speed - 1;
+			Target.GetComponent<NavMeshAgent>().speed = Target.GetComponent<NavMeshAgent>().speed - 0.3f*(Target.GetComponent<NavMeshAgent>().speed);
 			if (Target.GetComponent<Health>().currentHealth <=0){
 				tAudio.Stop ();
 				

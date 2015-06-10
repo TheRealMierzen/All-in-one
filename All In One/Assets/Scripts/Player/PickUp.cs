@@ -72,11 +72,11 @@ public class PickUp : MonoBehaviour {
 		
 			if (distance <= 1f) {
 
-				if (Inventory.addToInv (this.gameObject.name) == true) {
-
-					Destroy (this.gameObject);
-
-				}
+//				if (Inventory.addToInv (this.gameObject.name) == true) {
+//
+//					Destroy (this.gameObject);
+//
+//				}
 
 
 

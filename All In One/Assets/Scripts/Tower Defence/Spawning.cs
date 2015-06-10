@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using UnityEngine.UI;
 
 public class Spawning : MonoBehaviour {
 
@@ -22,9 +23,10 @@ public class Spawning : MonoBehaviour {
 	float  waveFinishTime;
 	float  waveDelay = 15f;
 
-	
-	
-	
+	public Canvas time;
+	public Text timer;
+	public Text Wave;
+
 	// Use this for initialization
 	void Start () {
 
@@ -33,6 +35,7 @@ public class Spawning : MonoBehaviour {
 		spawnRate = 2f;
 		difficulty = 1;
 		waveCount = 1;
+		Wave.GetComponent<Text> ().text = "Wave: " + waveCount;
 		waveEnemyCount = Mathf.Round(difficulty * (int)5);
 		numAlive = (int)waveEnemyCount;
 		waveStartTime = Time.time;
@@ -42,9 +45,9 @@ public class Spawning : MonoBehaviour {
 		lastSpawnTime = 0f;
 		waveEnemy = UnityEngine.Random.Range (0,enemies.Length);
 		enemyType = enemies [waveEnemy];
-		
-		
-		
+
+		time.GetComponent<Canvas> ().enabled = false;
+
 	}
 
 	// Update is called once per frame
@@ -74,8 +77,10 @@ public class Spawning : MonoBehaviour {
 
 
 			if ((Time.time > waveFinishTime + waveDelay) && (numAlive == -1)) {
+				time.GetComponent<Canvas>().enabled = false;
 
 				waveCount += 1;
+				Wave.GetComponent<Text> ().text = "Wave: " + waveCount;
 				waveStartTime = Time.time;
 				if (waveCount >= 10) {
 
@@ -89,6 +94,12 @@ public class Spawning : MonoBehaviour {
 
 				waveEnemyCount = Mathf.Round (difficulty * (int)10);
 				numAlive = (int)waveEnemyCount;
+
+			}else{
+				if(((waveFinishTime + waveDelay) - Time.time) > 0){
+					timer.GetComponent<Text>().text = "Next wave in: " + Math.Round (((waveFinishTime + waveDelay) - Time.time),0);
+					time.GetComponent<Canvas>().enabled = true;
+				}
 
 			}
 		

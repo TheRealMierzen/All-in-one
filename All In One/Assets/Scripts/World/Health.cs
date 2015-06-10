@@ -241,7 +241,7 @@ public class Health : MonoBehaviour {
 			control.GetComponent<Spawning>().numAlive -= 1;
 			//tAudio.Play ();
 
-			Destroy (character);
+			Destroy (character,1f);
 
 		}
 
