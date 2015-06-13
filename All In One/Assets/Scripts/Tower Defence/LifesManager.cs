@@ -26,6 +26,7 @@ public class LifesManager : MonoBehaviour {
             player = GameObject.Find("Player(Clone)");
             Cursor.visible = true;
             player.GetComponent<MouseLook>().enabled = false;
+            player.GetComponentInChildren<MouseLook>().enabled = false;
             GameObject.Find("UI").GetComponent<Canvas>().enabled = false;
             gameOver.GetComponent<Canvas>().enabled = true;
             Time.timeScale = 0;

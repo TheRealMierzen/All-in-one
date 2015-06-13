@@ -247,7 +247,19 @@ public class Health : MonoBehaviour {
 
 	}
 
+    //void OnParticleCollision(Collider other)
+    //{
 
+    //    float burn = Random.Range(1f, 10f);
+
+    //    if(burn/5 == 0 && other.gameObject.tag != "Player")
+    //    {
+    //        isBurning = true;
+    //        this.gameObject.AddComponent<ParticleSystem>();
+
+    //    }
+
+    //}
 
 
 }

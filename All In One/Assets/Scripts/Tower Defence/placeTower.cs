@@ -73,7 +73,7 @@ public class placeTower : MonoBehaviour {
 
 			RaycastHit target;
 
-			if (Physics.Raycast (transform.position,transform.forward,out target,10f)){
+			if (Physics.Raycast (transform.position,transform.forward,out target,7f)){
 
 				if(target.collider.gameObject.GetComponent<blockStatus>().checkStatus () == false && GameObject.Find("TD_Control").GetComponent<goldManager>().gold >= towerCost[selectedTower]){
 

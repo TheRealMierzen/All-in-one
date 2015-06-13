@@ -8,7 +8,7 @@ public class blockStatus : MonoBehaviour {
 
 		RaycastHit hit;
 
-		if (Physics.Raycast (transform.position, transform.up, out hit, 1.5f)){
+		if (Physics.Raycast (transform.position, transform.up, out hit, 5f)){
 			//if nothing
 			if (hit.collider.gameObject == null) {
 

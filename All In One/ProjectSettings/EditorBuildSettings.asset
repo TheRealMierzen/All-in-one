@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/TD.unity
   - enabled: 1
     path: Assets/PortalRoom.unity
+  - enabled: 1
+    path: Assets/Survival.unity

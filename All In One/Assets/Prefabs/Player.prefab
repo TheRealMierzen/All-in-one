@@ -18,6 +18,7 @@ GameObject:
   - 114: {fileID: 11402986}
   - 114: {fileID: 11455176}
   - 148: {fileID: 14845868}
+  - 136: {fileID: 13658476}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -83,7 +84,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 129932}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -422.716675, y: 1000, z: 333.368347}
+  m_LocalPosition: {x: -451.73999, y: 1005.03003, z: 398.23999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 429934}
@@ -383,6 +384,19 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 173648}
   m_Enabled: 1
+--- !u!136 &13658476
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129932}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .25
+  m_Height: .00999999978
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.25999999, z: 0}
 --- !u!143 &14329936
 CharacterController:
   m_ObjectHideFlags: 1
