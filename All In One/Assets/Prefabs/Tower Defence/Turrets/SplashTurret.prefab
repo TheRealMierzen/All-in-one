@@ -48,7 +48,7 @@ GameObject:
   - 114: {fileID: 11493832}
   m_Layer: 0
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: SlowTurret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +100,7 @@ GameObject:
   - 65: {fileID: 6530182}
   m_Layer: 0
   m_Name: SplashTurret
-  m_TagString: Untagged
+  m_TagString: SlowTurret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -424,6 +424,7 @@ MonoBehaviour:
   Status: 
   ShootingSound: {fileID: 8300000, guid: 4d6d816408e48e7428e863203522508f, type: 3}
   tAudio: {fileID: 0}
+  slowDuration: 5
   damage: 10
   movement: -10
 --- !u!135 &13540062

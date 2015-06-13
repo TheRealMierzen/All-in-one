@@ -74,6 +74,13 @@ public class MachineGunShoot : MonoBehaviour {
 		switch (Status)
         {
             case "Idle":
+                if (gameObject.transform.rotation.z != 0)
+                {
+                    float yRotation = gameObject.transform.localEulerAngles.y;
+                    float zRotation = gameObject.transform.localEulerAngles.z;
+                    //gameObject.transform.rotation = Quaternion.Euler(0f, yRotation, zRotation);
+                    transform.rotation = Quaternion.Lerp(gameObject.transform.rotation,  Quaternion.Euler (0f, yRotation, zRotation), Time.time * rotationSpeed / 2 );
+                }
                 Turret.transform.Rotate (Vector3.up, rotationSpeed * Time.deltaTime);
 			   
 			    break;

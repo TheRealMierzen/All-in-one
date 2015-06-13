@@ -781,6 +781,7 @@ GameObject:
   - 136: {fileID: 13693958}
   - 198: {fileID: 19893596}
   - 199: {fileID: 19987390}
+  - 114: {fileID: 11485240}
   m_Layer: 0
   m_Name: DarkDemon
   m_TagString: TEnemy
@@ -1790,6 +1791,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2744753f176fa394a96acfcdcc818d1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11485240
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170282}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f266480e84512c54d82cf68bf7540ce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0
+  shooter: {fileID: 0}
 --- !u!136 &13693958
 CapsuleCollider:
   m_ObjectHideFlags: 1

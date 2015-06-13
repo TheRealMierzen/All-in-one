@@ -166,6 +166,7 @@ GameObject:
   - 114: {fileID: 11443986}
   - 199: {fileID: 19960356}
   - 198: {fileID: 19814954}
+  - 114: {fileID: 11431892}
   m_Layer: 0
   m_Name: EarthDemon
   m_TagString: TEnemy
@@ -1779,6 +1780,19 @@ MonoBehaviour:
   death: {fileID: 0}
   die: {fileID: 0}
   goldWorth: 0
+--- !u!114 &11431892
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 113094}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f266480e84512c54d82cf68bf7540ce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0
+  shooter: {fileID: 0}
 --- !u!114 &11443986
 MonoBehaviour:
   m_ObjectHideFlags: 1

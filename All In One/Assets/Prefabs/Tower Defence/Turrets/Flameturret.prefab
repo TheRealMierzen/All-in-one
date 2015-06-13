@@ -48,7 +48,7 @@ GameObject:
   - 65: {fileID: 6518172}
   m_Layer: 0
   m_Name: Flameturret
-  m_TagString: Untagged
+  m_TagString: FlameTurret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

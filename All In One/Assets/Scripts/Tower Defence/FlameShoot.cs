@@ -18,13 +18,13 @@ public class FlameShoot : MonoBehaviour {
 	public float damage = 15f;
 	float lastShotTime = float.MinValue;
 	ParticleSystem fire;
-	string turretType   = "Fire"; 
-	
-	
-	
-	
-	// Use this for initialization
-	void Start () {
+	string turretType   = "Fire";
+    float rotationSpeed = 30f;
+
+
+
+    // Use this for initialization
+    void Start () {
 		
 		Turret = this.gameObject;
 		
@@ -38,8 +38,6 @@ public class FlameShoot : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-		float yRotation;
 		
 		FindClosestEnemy ();
 		
@@ -79,8 +77,17 @@ public class FlameShoot : MonoBehaviour {
 		switch (Status)
         {
             case "Idle":
-			    fire.enableEmission = false;
-			    Turret.transform.Rotate (Vector3.up, 30 * Time.deltaTime);
+                fire.enableEmission = false;
+                if (gameObject.transform.rotation.z != 0)
+                {
+                    float yRotation = gameObject.transform.localEulerAngles.y;
+                    float zRotation = gameObject.transform.localEulerAngles.z;
+                    //gameObject.transform.rotation = Quaternion.Euler(0f, yRotation, zRotation);
+                    transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, Quaternion.Euler(0f, yRotation, zRotation), Time.time * rotationSpeed / 2);
+                }
+                
+                
+                Turret.transform.Rotate (Vector3.up, 30 * Time.deltaTime);
 			    tAudio.Stop ();
 			    break;
 

@@ -1263,6 +1263,7 @@ GameObject:
   - 195: {fileID: 19503764}
   - 114: {fileID: 11463272}
   - 114: {fileID: 11450384}
+  - 114: {fileID: 11488628}
   m_Layer: 0
   m_Name: BigGoblin
   m_TagString: TEnemy
@@ -6765,7 +6766,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 198402}
-  m_LocalRotation: {x: .661381841, y: -.321861029, z: .366089612, w: .570050776}
+  m_LocalRotation: {x: .6613819, y: -.321861058, z: .366089642, w: .570050836}
   m_LocalPosition: {x: -.143454403, y: -.00868499838, z: -.0449427105}
   m_LocalScale: {x: 1, y: .99999994, z: .999999881}
   m_Children:
@@ -9826,7 +9827,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 102320}
-  m_LocalRotation: {x: .661381841, y: -.321860999, z: .366089493, w: .570051074}
+  m_LocalRotation: {x: .661381781, y: -.321860969, z: .366089463, w: .570051014}
   m_LocalPosition: {x: -.266631752, y: -.00868497789, z: -.0449426919}
   m_LocalScale: {x: .999999881, y: 1.00000012, z: 1.00000012}
   m_Children: []
@@ -10006,6 +10007,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2744753f176fa394a96acfcdcc818d1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11488628
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120718}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f266480e84512c54d82cf68bf7540ce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0
+  shooter: {fileID: 0}
 --- !u!136 &13672202
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -16,6 +16,11 @@ TagManager:
   - Dead
   - UI
   - ExitPortal
+  - FlameTurret
+  - LongRangeSplashTurret
+  - LongRangeTurret
+  - MachineGunTurret
+  - SlowTurret
   layers:
   - Default
   - TransparentFX

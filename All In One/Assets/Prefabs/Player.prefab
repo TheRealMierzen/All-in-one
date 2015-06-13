@@ -19,6 +19,7 @@ GameObject:
   - 114: {fileID: 11455176}
   - 148: {fileID: 14845868}
   - 136: {fileID: 13658476}
+  - 114: {fileID: 11428270}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -250,6 +251,17 @@ MonoBehaviour:
   maximumX: 360
   minimumY: -60
   maximumY: 60
+--- !u!114 &11428270
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 957e24343020551478b2f0bc373c797c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11429930
 MonoBehaviour:
   m_ObjectHideFlags: 1

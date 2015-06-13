@@ -871,6 +871,7 @@ GameObject:
   - 195: {fileID: 19536010}
   - 114: {fileID: 11418566}
   - 114: {fileID: 11413162}
+  - 114: {fileID: 11490206}
   m_Layer: 0
   m_Name: CaveWorm
   m_TagString: TEnemy
@@ -1765,6 +1766,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2744753f176fa394a96acfcdcc818d1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11490206
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 191244}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f266480e84512c54d82cf68bf7540ce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0
+  shooter: {fileID: 0}
 --- !u!136 &13625968
 CapsuleCollider:
   m_ObjectHideFlags: 1

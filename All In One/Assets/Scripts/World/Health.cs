@@ -81,103 +81,103 @@ public class Health : MonoBehaviour {
 
 		case "Golem(Clone)":
 			maxHealth = 500;
-			goldWorth = 50;
+			goldWorth = 30;
 			Type = "Ice";
 			break;
 
 		case "DarkDemon(Clone)":
 			maxHealth = 600;
-			goldWorth = 50;
+			goldWorth = 30;
 			Type = "Dark";
 			break;
 
 		case "FireDemon(Clone)":
 			maxHealth = 600;
-			goldWorth = 50;
+			goldWorth = 30;
 			Type = "Fire";
 			break;
 
 		case "IceDemon(Clone)":
 			maxHealth = 600;
-			goldWorth = 50;
+			goldWorth = 30;
 			Type = "Ice";
 			break;
 
 		case "EarthDemon(Clone)":
 			maxHealth = 600;
-			goldWorth = 50;
+			goldWorth = 30;
 			Type = "Nature";
 			break;
 
 		case "Goblin(Clone)":
 			maxHealth = 300;
-			goldWorth = 50;
+			goldWorth = 30;
 			Type = "Normal";
 			break;
 
 		case "BigGoblin(Clone)":
 			maxHealth = 450;
-			goldWorth = 50;
+			goldWorth = 30;
 			Type = "Armored";
 			break;
 
 		case "NormalSkeleton(Clone)":
 			maxHealth = 350;
-			goldWorth = 50;
+			goldWorth = 30;
 			Type = "Dark";
 			break;
 
 		case "FastSkeleton(Clone)":
 			maxHealth = 250;
-			goldWorth = 50;
+			goldWorth = 30;
 			Type = "Dark";
 			break;
 
 		case "Darkling(Clone)":
 			maxHealth = 600;
-			goldWorth = 50;
+			goldWorth = 30;
 			Type = "Armored";
 			break;
 
 		case "BigDarkling(Clone)":
 			maxHealth = 800;
-			goldWorth = 50;
+			goldWorth = 40;
 			Type = "Dark";
 			break;
 
 		case "Cyclops(Clone)":
 			maxHealth = 550;
-			goldWorth = 50;
+			goldWorth = 30;
 			Type = "Normal";
 			break;
 
 		case "Prowler(Clone)":
 			maxHealth = 600;
-			goldWorth = 50;
+			goldWorth = 30;
 			Type = "Machine";
 			break;
 
 		case "GreenGoblin(Clone)":
 			maxHealth = 400;
-			goldWorth = 50;
+			goldWorth = 30;
 			Type = "Nature";
 			break;
 
 		case "BlueGoblin(Clone)":
 			maxHealth = 450;
-			goldWorth = 50;
+			goldWorth = 30;
 			Type = "Water";
 			break;
 
 		case "RedGoblin(Clone)":
 			maxHealth = 500;
-			goldWorth = 50;
+			goldWorth = 30;
 			Type = "Fire";
 			break;
 
 		case "Spider(Clone)":
 			maxHealth = 100;
-			goldWorth = 50;
+			goldWorth = 30;
 			Type = "Nature";
 			break;
 		case "Crashed":
@@ -228,9 +228,18 @@ public class Health : MonoBehaviour {
 			damage = damage * 0.6f;
 		}
 
+        if (shooter.tag == "SlowTurret")
+        {
+
+            gameObject.GetComponent<Slow>().enabled = true;
+            gameObject.GetComponent<Slow>().shooter = shooter;
+            gameObject.GetComponent<Slow>().duration = shooter.GetComponent<SplashturretShoot>().slowDuration;
+
+        }
 
 
-		currentHealth = currentHealth - damage;
+
+        currentHealth = currentHealth - damage;
 
 		if (currentHealth <= 0) {
 			character.tag = "Dead";

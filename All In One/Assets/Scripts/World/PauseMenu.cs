@@ -49,7 +49,8 @@ public class PauseMenu : MonoBehaviour {
 			Time.timeScale = 1f;
 			player.GetComponent<MouseLook>().enabled = true;
             player.GetComponentInChildren<MouseLook>().enabled = true;
-			Cursor.visible = false;
+            player.GetComponentInChildren<placeTower>().enabled = true;
+            Cursor.visible = false;
 			PauseScreen.GetComponent<Canvas>().enabled = false;
 			UI.SetActive (true);
 			paused = false;
@@ -59,6 +60,7 @@ public class PauseMenu : MonoBehaviour {
 			Time.timeScale = 0f;
 			player.GetComponent<MouseLook>().enabled = false;
             player.GetComponentInChildren<MouseLook>().enabled = false;
+            player.GetComponentInChildren<placeTower>().enabled = false;
             Cursor.visible = true;
 			UI.SetActive (false);
 			PauseScreen.GetComponent<Canvas>().enabled = true;

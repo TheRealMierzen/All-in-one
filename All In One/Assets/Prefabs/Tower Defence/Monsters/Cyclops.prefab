@@ -900,6 +900,7 @@ GameObject:
   - 114: {fileID: 11401964}
   - 195: {fileID: 19556642}
   - 136: {fileID: 13699756}
+  - 114: {fileID: 11424322}
   m_Layer: 0
   m_Name: Cyclops
   m_TagString: TEnemy
@@ -1730,6 +1731,19 @@ MonoBehaviour:
   death: {fileID: 0}
   die: {fileID: 0}
   goldWorth: 0
+--- !u!114 &11424322
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 198874}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f266480e84512c54d82cf68bf7540ce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0
+  shooter: {fileID: 0}
 --- !u!114 &11462268
 MonoBehaviour:
   m_ObjectHideFlags: 1

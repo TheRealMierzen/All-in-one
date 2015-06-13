@@ -582,6 +582,7 @@ GameObject:
   - 195: {fileID: 19502112}
   - 114: {fileID: 11494052}
   - 114: {fileID: 11417016}
+  - 114: {fileID: 11464152}
   m_Layer: 0
   m_Name: BigDarkling
   m_TagString: TEnemy
@@ -1514,6 +1515,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2744753f176fa394a96acfcdcc818d1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11464152
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173478}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f266480e84512c54d82cf68bf7540ce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0
+  shooter: {fileID: 0}
 --- !u!114 &11494052
 MonoBehaviour:
   m_ObjectHideFlags: 1

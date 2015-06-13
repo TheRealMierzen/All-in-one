@@ -20,12 +20,12 @@ public class LongRangeShoot : MonoBehaviour {
 	LineRenderer line;
 	public GameObject GunTip;
 	public GameObject hitLight;
-	string turretType   = "Electric"; 
+	string turretType   = "Electric";
+    float rotationSpeed = 30f;
 
-		
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 
 		Turret = this.gameObject;
 
@@ -73,7 +73,14 @@ public class LongRangeShoot : MonoBehaviour {
         {
 		    case "Idle":
 			    line.enabled = false;
-			    Turret.transform.Rotate (Vector3.up, 30 * Time.deltaTime);
+                if (gameObject.transform.rotation.z != 0)
+                {
+                    float yRotation = gameObject.transform.localEulerAngles.y;
+                    float zRotation = gameObject.transform.localEulerAngles.z;
+                    //gameObject.transform.rotation = Quaternion.Euler(0f, yRotation, zRotation);
+                    transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, Quaternion.Euler(0f, yRotation, zRotation), Time.time * rotationSpeed / 2);
+                }
+                Turret.transform.Rotate (Vector3.up, 30 * Time.deltaTime);
 			    tAudio.Stop ();
 			    break;
 		    case "Shoot":

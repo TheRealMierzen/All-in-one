@@ -8,6 +8,8 @@ public class placeTower : MonoBehaviour {
 	public GameObject[] Towers = new GameObject[6]; 
 	int[]  towerCost = new int[6];
 	int    selectedTower;
+    int[]  towerCount = new int[6];
+    int[] initCost = new int[6];
 //	Sprite image;
 //	public Image  show;
 	// Use this for initialization
@@ -20,7 +22,15 @@ public class placeTower : MonoBehaviour {
 		towerCost[4] = 110;
 		towerCost[5] = 100;
 
-		selectedTower = 0;
+
+        initCost[0] = 30;
+        initCost[1] = 35;
+        initCost[2] = 50;
+        initCost[3] = 80;
+        initCost[4] = 110;
+        initCost[5] = 100;
+
+        selectedTower = 0;
 
 
 	
@@ -79,6 +89,7 @@ public class placeTower : MonoBehaviour {
 
 					Instantiate (tower,target.transform.position + new Vector3(0f,1.3f,0f),Quaternion.identity);
 					GameObject.Find("TD_Control").GetComponent<goldManager>().gold -= towerCost[selectedTower];
+                    updateTowerCount();
 
 				}
 
@@ -88,5 +99,75 @@ public class placeTower : MonoBehaviour {
 	
 	}
 
+    void updateTowerCount()
+    {
 
+        towerCount[0] = GameObject.FindGameObjectsWithTag("MachineGunTurret").Length;
+        //towerCount[1] = GameObject.FindGameObjectsWithTag("MachineGunTurret").Length;
+        towerCount[2] = GameObject.FindGameObjectsWithTag("FlameTurret").Length;
+        towerCount[3] = GameObject.FindGameObjectsWithTag("LongRangeTurret").Length;
+        towerCount[4] = GameObject.FindGameObjectsWithTag("LongRangeSplashTurret").Length;
+        towerCount[5] = GameObject.FindGameObjectsWithTag("SlowTurret").Length;
+
+        for(int a = 0; a <= 5; a++)
+        {
+
+            if (towerCount[a] >= 6)
+            {
+                if (towerCost[a] == initCost[a])
+                {
+
+                    towerCost[a] = towerCost[a] + towerCost[a];
+
+                }
+                
+                if (towerCount[a] >= 12)
+                {
+                    if (towerCost[a] == (initCost[a] *2))
+                    {
+
+                        towerCost[a] = towerCost[a] + towerCost[a];
+
+                    }
+
+                    if (towerCount[a] >= 15)
+                    {
+                        if (towerCost[a] == (initCost[a] * 2))
+                        {
+
+                            towerCost[a] = towerCost[a] + towerCost[a];
+
+                        }
+
+                        if (towerCount[a] >= 18)
+                        {
+                            if (towerCost[a] == (initCost[a] * 2))
+                            {
+
+                                towerCost[a] = towerCost[a] + towerCost[a];
+
+                            }
+
+                            if (towerCount[a] >= 20)
+                            {
+                                if (towerCost[a] == (initCost[a] * 2))
+                                {
+
+                                    towerCost[a] = towerCost[a] + towerCost[a];
+
+                                }
+
+
+                            }
+                        }
+
+                    }
+                }
+
+            }
+
+        }
+
+
+    }
 }

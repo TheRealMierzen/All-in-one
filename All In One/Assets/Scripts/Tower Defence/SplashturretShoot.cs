@@ -16,18 +16,18 @@ public class SplashturretShoot : MonoBehaviour {
 	float fireRate = 0.5f;
 	float range = 15f;
 	float lastShotTime = float.MinValue;
-	float slowDuration = 5f;
+	public float slowDuration = 5f;
 	float TargetMovement;
 	public float damage = 10f;
 	public float movement = -10f;
-	string turretType   = "Normal"; 
+	string turretType   = "Normal";
+    float rotationSpeed = 30f;
 
-	
-	
-	
-	
-	// Use this for initialization
-	void Start () {
+
+
+
+    // Use this for initialization
+    void Start () {
 		
 		Turret = this.gameObject;
 		
@@ -41,7 +41,6 @@ public class SplashturretShoot : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		float yRotation;
 		
 		FindClosestEnemy ();
 		
@@ -81,7 +80,14 @@ public class SplashturretShoot : MonoBehaviour {
 		switch (Status)
         {
 		    case "Idle":
-			    Turret.transform.Rotate (Vector3.up, 30 * Time.deltaTime);
+                if (gameObject.transform.rotation.z != 0)
+                {
+                    float yRotation = gameObject.transform.localEulerAngles.y;
+                    float zRotation = gameObject.transform.localEulerAngles.z;
+                    //gameObject.transform.rotation = Quaternion.Euler(0f, yRotation, zRotation);
+                    transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, Quaternion.Euler(0f, yRotation, zRotation), Time.time * rotationSpeed / 2);
+                }
+                Turret.transform.Rotate (Vector3.up, 30 * Time.deltaTime);
 			    tAudio.Stop ();
 			    break;
 		    case "Shoot":
@@ -103,7 +109,7 @@ public class SplashturretShoot : MonoBehaviour {
 			tAudio.Play ();
 			tAudio.Play ();
 			Target.GetComponent<Health>().ApplyDamage (damage,Turret,turretType);
-			Target.GetComponent<NavMeshAgent>().speed = Target.GetComponent<NavMeshAgent>().speed - 0.3f*(Target.GetComponent<NavMeshAgent>().speed);
+			//Target.GetComponent<NavMeshAgent>().speed = Target.GetComponent<NavMeshAgent>().speed - 0.3f*(Target.GetComponent<NavMeshAgent>().speed);
 			if (Target.GetComponent<Health>().currentHealth <=0){
 				tAudio.Stop ();
 				
